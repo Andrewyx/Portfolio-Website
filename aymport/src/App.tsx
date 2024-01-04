@@ -1,33 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+
+      <section>
+        <h1>Hello, I'm Andrew!</h1>
+        <p id="snippet">I am a Programmer, Roboticist, Game Dev</p>
+
+        <button id="contact"> Contact Me</button></section>
+
+      <section>
+        <h2>About Me</h2>
+        <p>I have a mixed background in software and hardware design, 
+          with experience with languages such as Python, C++, and C#. 
+          I am a hardware hobbyist with proficiency in many design programs 
+          such as Autodesk Inventor, Fusion360, Ultimaker Cura, Fritzing, and the Arduino IOT Cloud.
+          I absolutely adore game design, so if you ever have an idea you would like to share or
+           would simply like to try out some of my projects, I would love to connect with you!
+           </p></section>
+        
+      <section><h2>Projects</h2></section>
+
+
     </>
   )
 }
