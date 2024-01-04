@@ -24,7 +24,34 @@ function App() {
            <img src={selfie} alt='Andrew'></img>
            </div></section>
 
-      <section><h2>Projects</h2></section>
+      <section><h2>Projects</h2>
+      
+      <div>
+        <div>
+          <h3>Flint</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus laudantium, consectetur sunt quis magni dicta. Accusantium, soluta libero tenetur, nam delectus nihil voluptates doloribus modi quaerat voluptatibus quam dolorum. Debitis.<img src="" alt="" /></p>
+        </div>
+      </div>
+      <div>
+        <div>
+          <h3>Soccer Bots</h3>
+          <p>Excepturi accusamus voluptatem itaque, nesciunt magni quas dolores porro, modi expedita minus sit velit beatae sequi debitis consequatur a tenetur iusto quidem quis assumenda, perferendis dolorum enim ea dolore! Ipsam!<img src="" alt="" /></p>
+        </div>
+      </div>
+      <div>
+        <div>
+          <h3>Collidy Road</h3>
+          <p>Animi voluptas neque repellendus! Soluta itaque alias quas rem libero nihil, temporibus eum ad sed illum vitae, voluptate laudantium sint veritatis quidem magnam saepe iure, perferendis neque? Incidunt, tempore aut.<img src="" alt="" /></p>
+        </div>
+      </div>
+      <div>
+        <div>
+          <h3>Treescape</h3>
+          <p>Possimus facilis quia mollitia labore? Dolorem obcaecati adipisci facere, vitae error recusandae eos unde velit voluptates, optio impedit hic, at eaque minima. Porro maiores reiciendis, harum voluptas hic ex dolore.<img src="" alt="" /></p>
+        </div>
+      </div>
+      
+      </section>
 
 
     </>
