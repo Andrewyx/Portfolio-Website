@@ -52,3 +52,9 @@ section {
   align-items: center;
   justify-content: center;
 }
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}

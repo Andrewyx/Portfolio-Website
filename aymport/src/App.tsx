@@ -1,10 +1,38 @@
-import './App.css'
-import selfie from './selfie.jpg'
-
+import './App.css';
+import selfie from './selfie.jpg';
+import * as THREE from 'three'
 function App() {
-
+  const width =  window.innerWidth;
+  const height = window.innerHeight; 
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+  
+  const renderer = new THREE.WebGLRenderer({
+    canvas: document.getElementById('#bg') as HTMLCanvasElement,
+  });
+  
+  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setSize(width, height);
+  camera.position.setZ(30);
+  
+  const geometry = new THREE.BoxGeometry();
+  const material = new THREE.MeshPhongMaterial({color: 0xFFAD00});
+  
+  const cube = new THREE.Mesh(geometry, material);
+  
+  cube.position.z = -5;
+  cube.position.y = 1;
+  scene.add(cube);
+  
+  const light = new THREE.DirectionalLight(0xFFFFFF, 1);
+  light.position.set(0, 4, 2);
+  scene.add(light);
+  
+  renderer.render(scene, camera);
   return (
     <>
+      <canvas id="bg"></canvas>
+      
       <section id="landing">
         <h1>Hello, I'm Andrew!</h1>
         <p id="snippet">I am a Programmer, Roboticist, Game Dev</p>
