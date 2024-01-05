@@ -1,8 +1,6 @@
 #root {
-  max-width: 1280px;
-  margin: 0 0;
-  padding: 0rem;
   text-align: center;
+  
 }
 
 #about {
@@ -38,8 +36,19 @@
     margin-bottom: 1rem;
   }
   #snippet {
+    margin: 1rem;
+    padding-top: 1rem;
+    line-height: auto;
+    display: flex;
+    flex-direction: row;
     font-size: 1.9rem;
-    margin-bottom: 25rem;
+    height: 3rem;
+
+    p {
+      padding: auto;
+      margin: 0rem;
+
+    }
   }
   
   #contact {
@@ -54,11 +63,47 @@
   }
 }
 
+span {
+  display: block;
+  height: 100%;
+  margin: 0rem;
+  padding-left: 0.5rem;
+  padding-right: 1rem;
+  text-align: left;
+  animation: spin-words 6s infinite;
+}
 
+canvas {
+  height: 25rem;
+  width: auto;
+}
 
+.words {
+  overflow: hidden;
+}
 
+@keyframes spin-words {
+  15%{
+    transform: translateY(-112%);
+  }
+  30%{
+    transform: translateY(-100%);
+  }
+  
+  50%{
+    transform: translateY(-212%);
+  }
+  65%{
+    transform: translateY(-200%);
+  }
 
-
+  85%{
+    transform: translateY(-312%);
+  }
+  100%{
+    transform: translateY(-300%);
+  }
+}
 
 /* .logo {
   height: 6em;

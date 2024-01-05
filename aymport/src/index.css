@@ -6,7 +6,7 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #181818;
-
+  background-color: #181818;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -17,7 +17,8 @@
 body {
   margin: 10rem 15rem;
   display: flex;
-  justify-content: center;  
+  flex-direction: column;
+  
   min-width: 320px;
   min-height: 100vh;
 }
@@ -53,8 +54,3 @@ section {
   justify-content: center;
 }
 
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-}
