@@ -1,11 +1,30 @@
 import { Suspense, useRef } from 'react';
 import './App.css';
-import { Mesh } from 'three';
+import { Mesh, SpotLight, SpotLightHelper } from 'three';
 import selfie from './selfie.jpg';
-import { Canvas, useFrame} from "@react-three/fiber";
+import { Canvas, LightProps, useFrame} from "@react-three/fiber";
 import { Model } from './Walle';
+import { PerspectiveCamera, useHelper } from '@react-three/drei';
 
-function ThreeScene() {
+const PI:number = Math.PI;
+
+function Light( { position=[1,1,1], rotation=[0,0,0], color=0xFFFFFF, intensity=2}: LightProps) { 
+  const lightRef = useRef<SpotLight>(null!);
+  useHelper(lightRef, SpotLightHelper, 1, );
+  return (
+    <spotLight position={position} rotation={rotation} intensity={intensity} color={color}/>
+  )
+}
+
+// function GroundPlane() {
+//   return (
+//     <mesh rotation={[Math.PI/-2, 0, 0]} position={[0,-1,0]}>
+//       <planeGeometry attach="geometry" args={[100, 100]} />
+//       <meshStandardMaterial attach="material" color={0x181818} />
+//     </mesh>
+//   )
+// }
+function Walle() {
   const roboref = useRef<Mesh>(null!)
    useFrame((state, delta) => {
      if (roboref.current){
@@ -18,15 +37,19 @@ function ThreeScene() {
   return (
     <>
       <Suspense fallback={<h3>Loading...</h3>}>
-        <pointLight position={[0, 2, 5]} intensity={20} color={0xFFFFFF}/>
-        <pointLight position={[0, -2, 5]} intensity={20} color={0xFFFFFF}/>
+        <Light position={[4, 3, 4]} rotation={[PI, 0, PI]} intensity={40}/>
+        <Light position={[-4, 3, 4]} rotation={[-PI, 0, -PI]} intensity={40}/>
+        
         <mesh ref={roboref}>
-        <Model scale={25} position={[-0.5, 0, 0]}/>
+        <Model scale={25} position={[-0.5,0,0]}/>
         </mesh>
+        
       </Suspense>
     </>
   )
 }
+
+
 
 
 function App() {
@@ -34,18 +57,26 @@ function App() {
   return (
     <>     
       <section id="landing">
-        <h1>Hello, I'm Andrew!</h1>
+        <div id="title">
+          <h1>Hello, I'm </h1>
+          <h1 id="name">Andrew</h1>
+          <h1>!</h1>
+        </div>
         <div id="snippet"> 
           <p>I am a </p>
           <div className="words">
               <span>Programmer</span>
               <span>Roboticist</span>
               <span>Game Dev</span>
+              <span>Roboticist</span>
               <span>Programmer</span>
             </div>
         </div> 
         <Canvas>
-        <ThreeScene />
+        <PerspectiveCamera makeDefault position={[0, 3, 7]} rotation={[-0.4,0,0]}/>
+        <Walle />
+
+
         </Canvas>
         <button id="contact"> Contact Me</button>
 
@@ -71,6 +102,7 @@ function App() {
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus laudantium, consectetur sunt quis magni dicta. Accusantium, soluta libero tenetur, nam delectus nihil voluptates doloribus modi quaerat voluptatibus quam dolorum. Debitis.<img src="" alt="" /></p>
         </div>
       </div>
+      
       <div>
         <div>
           <h3>Soccer Bots</h3>

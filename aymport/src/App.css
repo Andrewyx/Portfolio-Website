@@ -1,6 +1,12 @@
 #root {
   text-align: center;
-  
+  --purple: rgb(123, 31, 162);
+  --violet: rgb(103, 58, 183);
+  --pink: rgb(244, 143, 177);
+  --offwhite: #C07F00;
+  --yellow: #FFD95A;
+  --orchid: #C07F00;
+  --brown: #4C3D3D;
 }
 
 #about {
@@ -26,14 +32,38 @@
     }
 
 }
-
+#title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
 #landing {
   margin:auto;
   display: flex;
   flex-direction: column;
   white-space: normal;
+  
   h1 {
     margin-bottom: 1rem;
+    margin-top: 0rem;
+
+  }
+  #name {
+    margin-left: 1rem;
+    background-image: linear-gradient(
+      to right,
+      var(--offwhite),
+      var(--yellow),
+      var(--orchid),
+      var(--offwhite));
+      animation: background-pan 3s linear infinite;
+      background-size: 200%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      white-space: nowrap;
+      transition: all 0.2s ease-in-out;
   }
   #snippet {
     margin: 1rem;
@@ -59,8 +89,39 @@
     font-size: 1.5em;
     font-weight: 550;
     font-family: inherit;
-    background-image: linear-gradient(to right, rgba(42, 42, 180, 0.747), rgba(143, 34, 143, 0.705));
+    display: inline-block;
+    position: relative;
+    border: 0.1rem solid rgba(255, 255, 255, 0.582);
+    /* background-image: linear-gradient(to right, rgba(42, 42, 180, 0.747), rgba(143, 34, 143, 0.705)); */
+    
+    
+    /* animation: background-pan 3s linear infinite;
+    background: linear-gradient(
+      to right,
+      var(--purple),
+      var(--violet),
+      var(--pink),
+      var(--purple)
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap; */
   }
+}
+
+#contact:hover {
+
+  background-image: linear-gradient(
+      to right,
+      var(--offwhite),
+      var(--yellow),
+      var(--orchid),
+      var(--offwhite));
+  animation: background-pan 2s  infinite;
+  background-size: 200%;
+  box-shadow: 0 1rem 3rem var(--yellow);
+  transition: all 0.2s ease-in-out;
 }
 
 span {
@@ -70,7 +131,7 @@ span {
   padding-left: 0.5rem;
   padding-right: 1rem;
   text-align: left;
-  animation: spin-words 6s infinite;
+  animation: spin-words 7s infinite;
 }
 
 canvas {
@@ -81,27 +142,41 @@ canvas {
 .words {
   overflow: hidden;
 }
-
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  
+  to {
+    background-position: -200% center;
+  }
+}
 @keyframes spin-words {
-  15%{
+  10%{
     transform: translateY(-112%);
   }
-  30%{
+  25%{
     transform: translateY(-100%);
   }
   
-  50%{
+  35%{
     transform: translateY(-212%);
   }
-  65%{
+  50%{
     transform: translateY(-200%);
   }
 
-  85%{
+  60%{
     transform: translateY(-312%);
   }
-  100%{
+  75%{
     transform: translateY(-300%);
+  }
+  85%{
+    transform: translateY(-412%);
+  }
+  100%{
+    transform: translateY(-400%);
   }
 }
 
