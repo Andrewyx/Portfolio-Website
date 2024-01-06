@@ -79,7 +79,7 @@ function App() {
             <span className='titlespan'>Programmer</span>
           </div>
         </div>
-        <Canvas>
+        <Canvas style={{height:"50%"}}>
           <PerspectiveCamera makeDefault position={[0, 3, 7]} rotation={[-0.4, 0, 0]} />
           <Walle />
         </Canvas>

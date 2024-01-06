@@ -9,82 +9,6 @@
   --brown: #4C3D3D;
 }
 
-#about {
-  padding: 5rem;
-  font-family: inherit;
-
-  #skillcontainer {
-    background-image: linear-gradient(to right,
-      var(--offwhite),
-      var(--yellow),
-      var(--orchid),
-      var(--brown),
-      var(--offwhite));
-    border-radius: 2rem;
-    animation: background-pan 4s infinite;
-    background-size: 200%;
-    transition: all 0.2s ease-in-out;
-    padding: 0.3rem;
-
-    div {
-      background-color: #181818;
-      border-radius: 2rem;
-      flex-direction: column;
-      div{
-        flex-direction: row;
-      }
-    }
-  }
-
-  #skill {
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 1.5rem;
-
-    div {
-      margin: 0.1rem;
-      padding: 0.2rem;
-    }
-  }
-
-  .skillBoxes {
-    width: 100%;
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 1.3rem;
-    border-radius: 0.5rem;
-    background-color: rgba(255, 255, 255, 0.048);
-    line-height: 0rem;
-    padding: 1rem;
-    margin: 0.1rem;
-  }
-
-  div {
-    display: flex;
-    flex-direction: row;
-    align-content: top;
-    font-size: larger;
-    padding: 1.5rem;
-
-    p {
-      padding-right: 2rem;
-    }
-
-    img {
-      margin: 1rem;
-      width: 15rem;
-      height: 15rem;
-      border-radius: 5rem;
-
-    }
-  }
-
-}
 
 #title {
   display: flex;
@@ -94,6 +18,7 @@
 }
 
 #landing {
+  height: 80vh;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -175,11 +100,6 @@
   animation: spin-words 7s infinite;
 }
 
-canvas {
-  height: 25rem;
-  width: auto;
-}
-
 .words {
   overflow: hidden;
 }
@@ -226,4 +146,79 @@ canvas {
   100% {
     transform: translateY(-400%);
   }
+}
+
+
+#about {
+  padding: 5rem;
+  font-family: inherit;
+  div {
+    display: flex;
+    flex-direction: column;
+    align-content: top;
+    font-size: larger;
+    padding: 1.5rem;
+    align-items: center;
+    
+    img {
+      margin: 1rem;
+      width: 15rem;
+      height: 15rem;
+      border-radius: 10000rem;
+      border: 1px solid white;
+    }
+  }
+
+  #skillcontainer {
+    background-image: linear-gradient(to right,
+      var(--offwhite),
+      var(--yellow),
+      var(--orchid),
+      var(--brown),
+      var(--offwhite));
+    border-radius: 2rem;
+    animation: background-pan 4s infinite;
+    background-size: 200%;
+    transition: all 0.2s ease-in-out;
+    padding: 0.3rem;
+    margin-top: 6rem;
+    div {
+      background-color: #181818;
+      border-radius: 2rem;
+      flex-direction: column;
+      div{
+        flex-direction: row;
+      }
+    }
+  }
+
+  #skill {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 1.5rem;
+
+    div {
+      margin: 0.1rem;
+      padding: 0.2rem;
+    }
+  }
+
+  .skillBoxes {
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.3rem;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.048);
+    line-height: 0rem;
+    padding: 1rem;
+    margin: 0.1rem;
+  }
+
+ 
 }
