@@ -18,9 +18,10 @@
       var(--offwhite),
       var(--yellow),
       var(--orchid),
+      var(--brown),
       var(--offwhite));
     border-radius: 2rem;
-    animation: background-pan 2s infinite;
+    animation: background-pan 4s infinite;
     background-size: 200%;
     transition: all 0.2s ease-in-out;
     padding: 0.3rem;
