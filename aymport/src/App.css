@@ -10,61 +10,116 @@
 }
 
 #about {
-    padding: 5rem;  
-    font-family: inherit;
-    
-    div {
-      display: flex;
-      flex-direction: row;
-      align-content: top;
-      font-size: larger;
-      padding:1.5rem;
-      p{
-        padding-right: 2rem;
-      }
-      img {
-        margin: 1rem;
-        width: 15rem;
-        height: 15rem;
-        border-radius: 5rem;
+  padding: 5rem;
+  font-family: inherit;
 
+  #skillcontainer {
+    background-image: linear-gradient(to right,
+      var(--offwhite),
+      var(--yellow),
+      var(--orchid),
+      var(--offwhite));
+    border-radius: 2rem;
+    animation: background-pan 2s infinite;
+    background-size: 200%;
+    transition: all 0.2s ease-in-out;
+    padding: 0.3rem;
+
+    div {
+      background-color: #181818;
+      border-radius: 2rem;
+      flex-direction: column;
+      div{
+        flex-direction: row;
       }
     }
+  }
+
+  #skill {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 1.5rem;
+
+    div {
+      margin: 0.1rem;
+      padding: 0.2rem;
+    }
+  }
+
+  .skillBoxes {
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.3rem;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.048);
+    line-height: 0rem;
+    padding: 1rem;
+    margin: 0.1rem;
+  }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    align-content: top;
+    font-size: larger;
+    padding: 1.5rem;
+
+    p {
+      padding-right: 2rem;
+    }
+
+    img {
+      margin: 1rem;
+      width: 15rem;
+      height: 15rem;
+      border-radius: 5rem;
+
+    }
+  }
 
 }
+
 #title {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
+
 #landing {
-  margin:auto;
+  margin: auto;
   display: flex;
   flex-direction: column;
   white-space: normal;
-  
+
   h1 {
     margin-bottom: 1rem;
     margin-top: 0rem;
 
   }
+
   #name {
     margin-left: 1rem;
-    background-image: linear-gradient(
-      to right,
-      var(--offwhite),
-      var(--yellow),
-      var(--orchid),
-      var(--offwhite));
-      animation: background-pan 3s linear infinite;
-      background-size: 200%;
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      white-space: nowrap;
-      transition: all 0.2s ease-in-out;
+    background-image: linear-gradient(to right,
+        var(--offwhite),
+        var(--yellow),
+        var(--orchid),
+        var(--offwhite));
+    animation: background-pan 3s linear infinite;
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+    transition: all 0.2s ease-in-out;
   }
+
   #snippet {
     margin: 1rem;
     padding-top: 1rem;
@@ -80,9 +135,9 @@
 
     }
   }
-  
+
   #contact {
-    
+
     border-radius: 2rem;
     border: 0px solid transparent;
     padding: 0.7em 2.2em;
@@ -92,39 +147,24 @@
     display: inline-block;
     position: relative;
     border: 0.1rem solid rgba(255, 255, 255, 0.582);
-    /* background-image: linear-gradient(to right, rgba(42, 42, 180, 0.747), rgba(143, 34, 143, 0.705)); */
-    
-    
-    /* animation: background-pan 3s linear infinite;
-    background: linear-gradient(
-      to right,
-      var(--purple),
-      var(--violet),
-      var(--pink),
-      var(--purple)
-    );
-    background-size: 200%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    white-space: nowrap; */
   }
 }
 
 #contact:hover {
 
-  background-image: linear-gradient(
-      to right,
+  background-image: linear-gradient(to right,
       var(--offwhite),
       var(--yellow),
       var(--orchid),
       var(--offwhite));
-  animation: background-pan 2s  infinite;
+  animation: background-pan 2s infinite;
   background-size: 200%;
+  transform: scale(0.95);
   box-shadow: 0 1rem 3rem var(--yellow);
   transition: all 0.2s ease-in-out;
 }
 
-span {
+.titlespan {
   display: block;
   height: 100%;
   margin: 0rem;
@@ -142,71 +182,47 @@ canvas {
 .words {
   overflow: hidden;
 }
+
 @keyframes background-pan {
   from {
     background-position: 0% center;
   }
-  
+
   to {
     background-position: -200% center;
   }
 }
+
 @keyframes spin-words {
-  10%{
+  10% {
     transform: translateY(-112%);
   }
-  25%{
+
+  25% {
     transform: translateY(-100%);
   }
-  
-  35%{
+
+  35% {
     transform: translateY(-212%);
   }
-  50%{
+
+  50% {
     transform: translateY(-200%);
   }
 
-  60%{
+  60% {
     transform: translateY(-312%);
   }
-  75%{
+
+  75% {
     transform: translateY(-300%);
   }
-  85%{
+
+  85% {
     transform: translateY(-412%);
   }
-  100%{
+
+  100% {
     transform: translateY(-400%);
   }
 }
-
-/* .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-} */
-
-
-
