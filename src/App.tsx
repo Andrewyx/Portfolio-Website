@@ -81,10 +81,12 @@ function App() {
             <span className='titlespan'>Programmer</span>
           </div>
         </div>
-        <Canvas style={{ height: "50%" }}>
-          <PerspectiveCamera makeDefault position={[0, 3, 7]} rotation={[-0.4, 0, 0]} />
-          <Walle />
-        </Canvas>
+        <Suspense fallback={<h3>Loading...</h3>}>
+          <Canvas style={{ height: "50%" }}>
+            <PerspectiveCamera makeDefault position={[0, 3, 7]} rotation={[-0.4, 0, 0]} />
+            <Walle />
+          </Canvas>
+        </Suspense>
         <a href='mailto:andrewmaobc@gmail.com'>
           <button id="contact">Contact Me</button>
         </a>
