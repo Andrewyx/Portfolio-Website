@@ -107,6 +107,12 @@ section {
     margin: 0rem;
 
   }
+  .threecanvas {
+    padding: 0rem;
+    margin: 0rem;
+    width: 100vw;
+    height: 30vh;
+  }
   #title {
     h1 {
       line-height: normal;
@@ -122,7 +128,12 @@ section {
     margin: 0rem;
 
   }
-
+  .threecanvas {
+    padding: 0rem;
+    margin: 0rem;
+    width: 100vw;
+    height: 30vh;
+  }
   #snippet {
     p {
     font-size: 1.5rem;
