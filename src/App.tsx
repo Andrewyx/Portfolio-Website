@@ -4,7 +4,7 @@ import { Mesh, SpotLight, SpotLightHelper } from 'three';
 
 import { Canvas, LightProps, useFrame } from "@react-three/fiber";
 import { Model } from './Walle';
-import { PerspectiveCamera, useHelper } from '@react-three/drei';
+import { OrbitControls, PerspectiveCamera, useHelper } from '@react-three/drei';
 import selfie from './selfie.jpg';
 import flintgif from "./flintvid.gif";
 import soccer from "./soccer.jpg";
@@ -68,8 +68,11 @@ function App() {
       <section id="landing">
         <div id="title">
           <h1>Hello, I'm </h1>
-          <h1 id="name">Andrew</h1>
-          <h1>!</h1>
+          <div style={{display: "inline"}}>
+            <h1 style={{display: "inline"}}id="name">Andrew</h1>
+            <h1 style={{display: "inline"}}>!</h1>
+            </ div>
+
         </div>
         <div id="snippet">
           <p>I am a </p>
@@ -81,12 +84,14 @@ function App() {
             <span className='titlespan'>Programmer</span>
           </div>
         </div>
-        <Suspense fallback={null}>
-          <Canvas style={{ height: "30rem" }}>
-            <PerspectiveCamera makeDefault position={[0, 3, 7]} rotation={[-0.4, 0, 0]} />
-            <Walle />
-          </Canvas>
-        </Suspense>
+        <div className='threecanvas'>
+          <Suspense fallback={null}>
+            <Canvas style={{ height: "100%"}}>
+              <PerspectiveCamera makeDefault position={[0, 3, 7]} rotation={[-0.4, 0, 0]} />
+              <Walle />
+            </Canvas>
+          </Suspense>
+        </div>
         <a href='mailto:andrewmaobc@gmail.com'>
           <button id="contact">Contact Me</button>
         </a>

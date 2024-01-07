@@ -52,6 +52,7 @@
     line-height: auto;
     display: flex;
     flex-direction: row;
+    
     font-size: 1.9rem;
     height: 3rem;
 
@@ -351,4 +352,10 @@
     line-height: 1rem;
   }
 
+}
+.threecanvas {
+  width: 100%;
+  height: 100%;
+  padding: 0rem;
+  margin: 0rem;
 }

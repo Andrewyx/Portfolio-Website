@@ -63,8 +63,14 @@ section {
     transition: 0.5s all;
     margin: 10% 15%;
     transform: scale(0.8);
-  }
 
+  }
+  .threecanvas {
+    padding: 0rem;
+    margin: 0rem;
+    width: 100vw;
+    height: 30vh;
+  }
 }
 
 @media screen and (max-width: 710px) {
@@ -72,6 +78,14 @@ section {
     width: auto;
     height: 100vh;
     transition: 0.5s all;
+    margin: 0rem;
+
+  }
+  .threecanvas {
+    padding: 0rem;
+    margin: 0rem;
+    width: 100vw;
+    height: 30vh;
   }
   #title {
     h1 {
@@ -86,14 +100,36 @@ section {
 }
 
 @media screen and (max-width: 520px) {
+
   body {
     width: auto;
     height: 100vh;
+    margin: 0rem;
+
   }
   #title {
     h1 {
       line-height: normal;
-      font-size: 2rem;
+      font-size: 3rem;
     }
   }
+}
+@media screen and (max-width: 450px) {
+ 
+  body {
+    width: auto;
+    height: 100vh;
+    margin: 0rem;
+
+  }
+
+  #snippet {
+    p {
+    font-size: 1.5rem;
+    }
+    .words {
+      font-size: 1.5rem;
+    }
+  }
+
 }
