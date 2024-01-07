@@ -30,7 +30,7 @@ function Walle() {
   })
   return (
     <>
-      <Suspense fallback={<h3>Loading...</h3>}>
+      <Suspense fallback={null}>
         <Light position={[4, 3, 4]} rotation={[PI, 0, PI]} intensity={40} />
         <Light position={[-4, 3, 4]} rotation={[-PI, 0, -PI]} intensity={40} />
 
@@ -81,7 +81,7 @@ function App() {
             <span className='titlespan'>Programmer</span>
           </div>
         </div>
-        <Suspense fallback={<h3>Loading...</h3>}>
+        <Suspense fallback={null}>
           <Canvas style={{ height: "50%" }}>
             <PerspectiveCamera makeDefault position={[0, 3, 7]} rotation={[-0.4, 0, 0]} />
             <Walle />
