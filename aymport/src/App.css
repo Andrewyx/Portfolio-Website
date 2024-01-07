@@ -311,26 +311,43 @@
 .project button {
   text-decoration: none;
   padding: 0.5rem 1rem;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.507);
   border-radius: 1rem;
 }
 
+.project button:hover {
+  background-image: linear-gradient(to right,
+      var(--orchid),
+      var(--yellow),
+      var(--orchid),
+      var(--orchid));
+  animation: background-pan 2s infinite;
+  background-size: 200%;
+  transform: scale(0.95);
+  box-shadow: 0 0rem 1rem 0.1rem var(--yellow);
+  transition: all 0.2s ease-in-out;
+}
+
 .project .cardDesc {
-  background-color: #303030;
+  background-color: #59226e;
   position: absolute;
   bottom: 0rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
   display:flex;
   flex-direction: column;
   min-width: 100%;
-  height: auto;
+  height: 11.5rem;
   opacity: 1;
   box-shadow: 0px 4px 2rem 0.1rem #000000;
   p {
     padding-left: 1rem;
     padding-right: 1rem;
+    padding-bottom: 0rem;
+    margin-bottom: 0rem;
+    margin-top: 0.1rem;
   }
   h3 {
+    padding-bottom: 0.8rem;
     padding-top: 2rem;
     line-height: 1rem;
   }
