@@ -4,7 +4,7 @@ import { Mesh, SpotLight, SpotLightHelper } from 'three';
 
 import { Canvas, LightProps, useFrame } from "@react-three/fiber";
 import { Model } from './Walle';
-import { OrbitControls, PerspectiveCamera, useHelper } from '@react-three/drei';
+import { PerspectiveCamera, useHelper } from '@react-three/drei';
 import selfie from './selfie.jpg';
 import flintgif from "./flintvid.gif";
 import soccer from "./soccer.jpg";
