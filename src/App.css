@@ -152,6 +152,7 @@
 
 #about {
   padding: 5rem;
+  height: fit-content;
   font-family: inherit;
   div {
     display: flex;
@@ -223,9 +224,14 @@
 }
 
 #projects {
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
 
+#projectwrapper {
+  margin: 1rem;
+  padding:0rem;
 }
 
 .project {
