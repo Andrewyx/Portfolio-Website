@@ -16,7 +16,7 @@ body {
   margin: 10rem 15rem;
   display: flex;
   flex-direction: column;
-  
+  align-content: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -56,3 +56,44 @@ section {
   justify-content: center;
 }
 
+@media screen and (max-width: 990px) {
+  body {
+    width: auto;
+    height: 100vh;
+    transition: 0.5s all;
+    margin: 10% 15%;
+    transform: scale(0.8);
+  }
+
+}
+
+@media screen and (max-width: 710px) {
+  body {
+    width: auto;
+    height: 100vh;
+    transition: 0.5s all;
+  }
+  #title {
+    h1 {
+      margin-bottom: 0rem;
+      line-height: normal;
+      font-size: 5rem;
+      #name {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  body {
+    width: auto;
+    height: 100vh;
+  }
+  #title {
+    h1 {
+      line-height: normal;
+      font-size: 2rem;
+    }
+  }
+}

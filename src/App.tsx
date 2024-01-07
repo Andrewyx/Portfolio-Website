@@ -82,7 +82,7 @@ function App() {
           </div>
         </div>
         <Suspense fallback={null}>
-          <Canvas style={{ height: "50%" }}>
+          <Canvas style={{ height: "30rem" }}>
             <PerspectiveCamera makeDefault position={[0, 3, 7]} rotation={[-0.4, 0, 0]} />
             <Walle />
           </Canvas>
