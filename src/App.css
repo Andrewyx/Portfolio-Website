@@ -16,12 +16,17 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+
 }
 
 #landing {
   height: 80vh;
-  margin: auto;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   white-space: normal;
 
@@ -64,7 +69,6 @@
   }
 
   #contact {
-
     border-radius: 2rem;
     border: 0px solid transparent;
     padding: 0.7em 2.2em;
@@ -227,6 +231,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center
 }
 
 #projectwrapper {
@@ -360,8 +365,16 @@
 
 }
 .threecanvas {
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: 50vh;
   padding: 0rem;
   margin: 0rem;
+}
+
+.standardreact {
+  height: fit-content;
+  transform-origin: 50% 0; 
+  -webkit-transform-origin: 50% 0;
+   -ms-transform-origin: 50% 0; 
+   -moz-transform-origin: 50% 0;
 }

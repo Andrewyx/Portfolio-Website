@@ -24,7 +24,6 @@ function Walle() {
   useFrame((state, delta) => {
     if (roboref.current) {
       roboref.current.rotation.y -= delta * 0.2;
-
       state = state;
     }
 
@@ -90,7 +89,6 @@ function App() {
             <Canvas>
               <PerspectiveCamera makeDefault position={[0, 3, 7]} rotation={[-0.4, 0, 0]} />
               <Walle />
-
             </Canvas>
           </Suspense>
         </div>
@@ -100,6 +98,8 @@ function App() {
 
 
       </section>
+      <div>
+      <section className="standardreact">
       <section id="about">
         <h2>About Me</h2>
         <div>
@@ -204,8 +204,8 @@ function App() {
           </div>
         </div>
       </section>
-
-
+      </section>
+      </div>
     </>
   )
 }

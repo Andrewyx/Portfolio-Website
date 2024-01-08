@@ -13,12 +13,13 @@
 
 
 body {
-  margin: 10rem 15rem;
+  margin: 0% 5%;
   display: flex;
   flex-direction: column;
   align-content: center;
   min-width: 320px;
   min-height: 100vh;
+
 }
 
 h1 {
@@ -57,26 +58,25 @@ section {
 }
 
 @media screen and (max-width: 990px) {
-  body {
+  .standardreact {
     width: auto;
-    height: 100vh;
+    height: 100%;
     transition: 0.5s all;
     margin: 10% 15%;
     transform: scale(0.8);
 
   }
-  .threecanvas {
-    height: 100%;
-    transform: scale(1.2);   
-    display: flex;
-    justify-content: center;
+
+  #contact {
+    transform: scale(0.8);
   }
+
 }
 
 @media screen and (max-width: 710px) {
-  body {
+  .standardreact {
     width: auto;
-    height: 100vh;
+    height: 100%;
     transition: 0.5s all;
     margin: 0rem;
 
@@ -95,9 +95,9 @@ section {
 
 @media screen and (max-width: 520px) {
 
-  body {
+  .standardreact  {
     width: auto;
-    height: 100vh;
+    height: 100%;
     margin: 0rem;
 
   }
@@ -110,11 +110,11 @@ section {
 }
 @media screen and (max-width: 450px) {
  
-  body {
-    width: auto;
-    height: 100vh;
+  .standardreact  {
+    height: fit-content;
     margin: 0rem;
-
+    position: relative;
+    top: 0;
   }
 
   #snippet {
@@ -126,4 +126,4 @@ section {
     }
   }
 
-}
+} 
