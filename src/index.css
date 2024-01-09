@@ -9,9 +9,12 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
-
+html {
+  width: 100%;
+}
 body {
   margin: 0% 5%;
   display: flex;
@@ -57,7 +60,7 @@ section {
   justify-content: center;
 }
 
-@media screen and (max-width: 990px) {
+/* @media screen and (max-width: 990px) {
   .standardreact {
     width: auto;
     height: 100%;
@@ -109,14 +112,10 @@ section {
   }
 }
 @media screen and (max-width: 450px) {
- 
   .standardreact  {
     height: fit-content;
-    margin: 0rem;
-    position: relative;
-    top: 0;
+    padding-bottom: 5vh;
   }
-
   #snippet {
     p {
     font-size: 1.5rem;
@@ -125,5 +124,67 @@ section {
       font-size: 1.5rem;
     }
   }
+}  */
 
-} 
+@media screen and (max-width: 650px) {
+  body, html{
+    margin:0;
+    padding:0;
+    width: 100%;
+    min-width: 350px;
+    overflow-x: hidden;
+}
+  #title {
+    h1 {
+      margin-bottom: 0rem;
+      line-height: normal;
+      font-size: 5rem;
+      #name {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+  #snippet {
+    p {
+    font-size: 1.5rem;
+    }
+    .words {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media screen and ((max-width: 400px) or (max-height: 900px)){
+  #title {
+    h1 {
+      padding-top: 1rem;
+      font-size: 3rem;
+      #name {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+  #snippet {
+    padding-left: 2rem;
+    p {
+    font-size: 1.2rem;
+    }
+    .words {
+      font-size: 1.2rem;
+    }
+  }
+  .threecanvas {
+    height: 40vh;
+  }
+  #landing {
+    padding-top: 8vh;
+    padding-bottom: 10vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+      a {
+      #contact {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

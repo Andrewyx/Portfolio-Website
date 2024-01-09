@@ -20,13 +20,13 @@
 }
 
 #landing {
-  height: 80vh;
+  height: fit-content;
   padding-top: 10vh;
   padding-bottom: 10vh;
   padding-left: 5vw;
   padding-right: 5vw;
   display: flex;
-  overflow: hidden;
+
   flex-direction: column;
   white-space: normal;
 
@@ -375,6 +375,6 @@
   height: fit-content;
   transform-origin: 50% 0; 
   -webkit-transform-origin: 50% 0;
-   -ms-transform-origin: 50% 0; 
-   -moz-transform-origin: 50% 0;
+   -ms-transform-origin: 0 0; 
+   -moz-transform-origin: 0 0;
 }
