@@ -7,6 +7,10 @@ import { Model } from './Walle';
 import { PerspectiveCamera, useHelper } from '@react-three/drei';
 import selfie from './selfie.jpg';
 import { Projects } from './Projects';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faLinkedin, faGithub, faItchIo } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
 const PI: number = Math.PI;
 
 function Light({ position = [1, 1, 1], rotation = [0, 0, 0], color = 0xFFFFFF, intensity = 2 }: LightProps) {
@@ -65,6 +69,18 @@ function App() {
 
   return (
     <>
+      <div className='sidetray'>
+        <a href='https://www.linkedin.com/in/andrewymao/'>
+          <FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
+        <a href='https://github.com/Andrewyx'>
+          <FontAwesomeIcon className='icon' icon={faGithub} /></a>
+        <a href='https://www.instagram.com/a.ndrew.m_/'>
+          <FontAwesomeIcon className='icon' icon={faInstagram} /></a>
+        <a href='https://andrewyx.itch.io/'>
+          <FontAwesomeIcon className='icon' icon={faItchIo} /></a>
+        <a href='mailto:andrewmaobc@gmail.com'>
+          <FontAwesomeIcon className='icon' icon={faEnvelope} /></a>
+      </div>
       <section id="landing">
         <div id="title">
           <h1>Hello, I'm </h1>
@@ -129,6 +145,15 @@ function App() {
           </div>
         </section>
       </section>
+      <div id="footer">
+
+          <h2>Come chat with me!</h2>
+
+          <a href='mailto:andrewmaobc@gmail.com'>
+            <button id="contact">Contact Me</button>
+          </a>
+          <span>Website made by Andrew Mao 2024</span>
+      </div>
     </>
   )
 }
