@@ -237,6 +237,16 @@
 #projectwrapper {
   margin: 1rem;
   padding:0rem;
+  #projecttitle {
+    h2 {
+      padding-bottom: 1rem;
+    }
+    span {
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+    padding-bottom: 3rem;
+  }
 }
 
 .project {

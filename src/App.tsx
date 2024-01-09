@@ -6,8 +6,7 @@ import { Canvas, LightProps, useFrame } from "@react-three/fiber";
 import { Model } from './Walle';
 import { PerspectiveCamera, useHelper } from '@react-three/drei';
 import selfie from './selfie.jpg';
-import flintgif from "./flintvid.gif";
-import soccer from "./soccer.jpg";
+import { Projects } from './Projects';
 const PI: number = Math.PI;
 
 function Light({ position = [1, 1, 1], rotation = [0, 0, 0], color = 0xFFFFFF, intensity = 2 }: LightProps) {
@@ -60,6 +59,7 @@ function SkillList() {
     <div id='skill'>{listItems}</div>
   )
 }
+
 
 function App() {
 
@@ -117,127 +117,15 @@ function App() {
               <SkillList />
             </div>
           </div>
-
-
-
         </section>
 
         <section id='projectwrapper'>
-          <h2>Projects</h2>
+          <div id="projecttitle">
+            <h2>Projects</h2>
+            <span>Some projects that I have worked on!</span>
+          </div>
           <div id='projects'>
-            <div className='project'>
-              <img src={flintgif} alt='flintgif'></img>
-              <div className='cardDesc'>
-                <h3>Flint</h3>
-                <p>Obsidian Extension for cross-device file syncing powered by Firebase </p>
-              </div>
-              <div className='cardInfo'>
-                <h3>Flint</h3>
-                <p>Unofficial Obsidian -
-                  Firebase vault sync plugin. Store your obsidian files on your own custom Firebase storage bucket for complete control over your cloud files! This plugin was made for those who want to solely manage their own data across their obsidian devices.
-                  Upload/Download data to your Firebase storage bucket with the upload icon & download.
-                  Support for access to multiple remote vaults on one device.
-                  Android/Mobile compatibility.</p>
-                <a href='https://github.com/Andrewyx/Flint'>
-                  <button>See More</button>
-                </a>
-              </div>
-            </div>
-
-            <div className='project'>
-              <img src={soccer} alt="soccerbot" />
-              <div className='cardDesc'>
-                <h3>Soccer Bots</h3>
-
-                <p>Remote controlled WIFI robots made to play soccer or joust!
-                  Self-designed software & hardware.
-                </p>
-                <p>C++ | Arduino</p>
-              </div>
-              <div className='cardInfo'>
-                <h3>Soccer Bots</h3>
-                <p>
-                  A web app and C++ server for personally designed WIFI soccer bots with an ESP32 microcontroller,
-                  L298N motor driver and custom PCBs for remote control. Constructed frontend mobile UI for joystick robot control and optimized latency with Web Socket API to link
-                  frontend to ESP32 access point server
-                </p>
-                <a href='https://github.com/Andrewyx/Soccer-Bots'>
-                  <button>See More</button>
-                </a>
-              </div>
-            </div>
-            <div className='project'>
-              <img src={flintgif} alt='flintgif'></img>
-              <div className='cardDesc'>
-                <h3>Flint</h3>
-                <p>Obsidian Extension for cross-device file syncing powered by Firebase </p>
-              </div>
-              <div className='cardInfo'>
-                <h3>Flint</h3>
-                <p>Unofficial Obsidian -
-                  Firebase vault sync plugin. Store your obsidian files on your own custom Firebase storage bucket for complete control over your cloud files! This plugin was made for those who want to solely manage their own data across their obsidian devices.
-                  Upload/Download data to your Firebase storage bucket with the upload icon & download.
-                  Support for access to multiple remote vaults on one device.
-                  Android/Mobile compatibility.</p>
-                <a href='https://github.com/Andrewyx/Flint'>
-                  <button>See More</button>
-                </a>
-              </div>
-            </div>
-            <div className='project'>
-              <img src={flintgif} alt='flintgif'></img>
-              <div className='cardDesc'>
-                <h3>Flint</h3>
-                <p>Obsidian Extension for cross-device file syncing powered by Firebase </p>
-              </div>
-              <div className='cardInfo'>
-                <h3>Flint</h3>
-                <p>Unofficial Obsidian -
-                  Firebase vault sync plugin. Store your obsidian files on your own custom Firebase storage bucket for complete control over your cloud files! This plugin was made for those who want to solely manage their own data across their obsidian devices.
-                  Upload/Download data to your Firebase storage bucket with the upload icon & download.
-                  Support for access to multiple remote vaults on one device.
-                  Android/Mobile compatibility.</p>
-                <a href='https://github.com/Andrewyx/Flint'>
-                  <button>See More</button>
-                </a>
-              </div>
-            </div>
-            <div className='project'>
-              <img src={flintgif} alt='flintgif'></img>
-              <div className='cardDesc'>
-                <h3>Flint</h3>
-                <p>Obsidian Extension for cross-device file syncing powered by Firebase </p>
-              </div>
-              <div className='cardInfo'>
-                <h3>Flint</h3>
-                <p>Unofficial Obsidian -
-                  Firebase vault sync plugin. Store your obsidian files on your own custom Firebase storage bucket for complete control over your cloud files! This plugin was made for those who want to solely manage their own data across their obsidian devices.
-                  Upload/Download data to your Firebase storage bucket with the upload icon & download.
-                  Support for access to multiple remote vaults on one device.
-                  Android/Mobile compatibility.</p>
-                <a href='https://github.com/Andrewyx/Flint'>
-                  <button>See More</button>
-                </a>
-              </div>
-            </div>
-            <div className='project'>
-              <img src={flintgif} alt='flintgif'></img>
-              <div className='cardDesc'>
-                <h3>Flint</h3>
-                <p>Obsidian Extension for cross-device file syncing powered by Firebase </p>
-              </div>
-              <div className='cardInfo'>
-                <h3>Flint</h3>
-                <p>Unofficial Obsidian -
-                  Firebase vault sync plugin. Store your obsidian files on your own custom Firebase storage bucket for complete control over your cloud files! This plugin was made for those who want to solely manage their own data across their obsidian devices.
-                  Upload/Download data to your Firebase storage bucket with the upload icon & download.
-                  Support for access to multiple remote vaults on one device.
-                  Android/Mobile compatibility.</p>
-                <a href='https://github.com/Andrewyx/Flint'>
-                  <button>See More</button>
-                </a>
-              </div>
-            </div>
+            <Projects />
           </div>
         </section>
       </section>
