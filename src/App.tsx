@@ -4,11 +4,13 @@ import { Projects } from './Projects';
 import { Links } from './Links';
 import { WalleScene } from './Model';
 import { SkillList } from './SkillBox';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function App() {
 
   return (
     <>
+      <SpeedInsights />
       {/* <div className='sidetray'>
         <Links />
       </div> */}
@@ -31,7 +33,7 @@ function App() {
             <span className='titlespan'>Programmer</span>
           </div>
         </div>
-          <WalleScene />
+        <WalleScene />
         <a href='mailto:andrewmaobc@gmail.com'>
           <button id="contact">Contact Me</button>
         </a>
@@ -78,8 +80,8 @@ function App() {
           <button id="contact">Contact Me</button>
         </a>
         <span>Website made by Andrew Mao 2024 <br />
-        andrewmaobc@gmail.com</span>
-        
+          andrewmaobc@gmail.com</span>
+
       </div>
     </>
   )
