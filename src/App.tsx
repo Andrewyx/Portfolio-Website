@@ -29,7 +29,6 @@ function Walle() {
       roboref.current.rotation.y -= delta * 0.2;
       state = state;
     }
-
   })
   return (
     <>
@@ -64,23 +63,28 @@ function SkillList() {
   )
 }
 
+function Links() {
+  return (<>
+    <a href='https://www.linkedin.com/in/andrewymao/'>
+      <FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
+    <a href='https://github.com/Andrewyx'>
+      <FontAwesomeIcon className='icon' icon={faGithub} /></a>
+    <a href='https://www.instagram.com/a.ndrew.m_/'>
+      <FontAwesomeIcon className='icon' icon={faInstagram} /></a>
+    <a href='https://andrewyx.itch.io/'>
+      <FontAwesomeIcon className='icon' icon={faItchIo} /></a>
+    <a href='mailto:andrewmaobc@gmail.com'>
+      <FontAwesomeIcon className='icon' icon={faEnvelope} /></a>
+  </>)
+}
 
 function App() {
 
   return (
     <>
-      <div className='sidetray'>
-        <a href='https://www.linkedin.com/in/andrewymao/'>
-          <FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
-        <a href='https://github.com/Andrewyx'>
-          <FontAwesomeIcon className='icon' icon={faGithub} /></a>
-        <a href='https://www.instagram.com/a.ndrew.m_/'>
-          <FontAwesomeIcon className='icon' icon={faInstagram} /></a>
-        <a href='https://andrewyx.itch.io/'>
-          <FontAwesomeIcon className='icon' icon={faItchIo} /></a>
-        <a href='mailto:andrewmaobc@gmail.com'>
-          <FontAwesomeIcon className='icon' icon={faEnvelope} /></a>
-      </div>
+      {/* <div className='sidetray'>
+        <Links />
+      </div> */}
       <section id="landing">
         <div id="title">
           <h1>Hello, I'm </h1>
@@ -111,10 +115,11 @@ function App() {
         <a href='mailto:andrewmaobc@gmail.com'>
           <button id="contact">Contact Me</button>
         </a>
-
-
       </section>
       <section className="standardreact">
+        <div className='horizontallink'>
+          <Links />
+        </div>
         <section id="about">
           <h2>About Me</h2>
           <div>
@@ -147,12 +152,14 @@ function App() {
       </section>
       <div id="footer">
 
-          <h2>Come chat with me!</h2>
+        <h2>Come chat with me!</h2>
 
-          <a href='mailto:andrewmaobc@gmail.com'>
-            <button id="contact">Contact Me</button>
-          </a>
-          <span>Website made by Andrew Mao 2024</span>
+        <a href='mailto:andrewmaobc@gmail.com'>
+          <button id="contact">Contact Me</button>
+        </a>
+        <span>Website made by Andrew Mao 2024 <br />
+        andrewmaobc@gmail.com</span>
+        
       </div>
     </>
   )

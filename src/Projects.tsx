@@ -2,13 +2,15 @@ import flintgif from "./flintvid.gif";
 import soccer from "./soccer.jpg";
 
 
-function MakeProject({ title, hook, overlaytitle, desc, link, src }: Details) {
+function MakeProject({ title, hook, tech, overlaytitle, desc, link, src }: Details) {
     return (
       <div className='project'>
         <img src={src} alt="Missing"></img>
         <div className='cardDesc'>
           <h3>{title}</h3>
+          <span style={{padding:"0rem", color:"white"}}>{tech}</span>
           <p>{hook}</p>
+          
         </div>
         <div className='cardInfo'>
           <h3>{overlaytitle}</h3>
@@ -17,12 +19,12 @@ function MakeProject({ title, hook, overlaytitle, desc, link, src }: Details) {
             <button>See More</button>
           </a>
         </div>
-      </div>)
-  }
+      </div>)}
   
   interface Details {
     title: string;
     hook: string;
+    tech: string;
     overlaytitle: string;
     desc: string;
     link: string;
@@ -34,6 +36,7 @@ export function Projects() {
       {
         title: "Flint",
         hook: "Obsidian Extension for cross-device file syncing powered by Firebase",
+        tech: "TypeScript | Firebase",
         overlaytitle: "Flint",
         desc: `Unofficial Obsidian -
         Firebase vault sync plugin. Store your obsidian files on your own custom Firebase storage bucket for complete control over your cloud files! This plugin was made for those who want to solely manage their own data across their obsidian devices.
@@ -45,7 +48,8 @@ export function Projects() {
       },
       {
         title: "Soccer Bots",
-        hook: `Remote controlled WIFI robots made to play soccer or joust! Self-designed software & hardware.`,
+        hook: `Remote controlled WIFI robots made to play soccer or joust!`,
+        tech: "JavaScript | WebSockets | C++",
         overlaytitle: "Soccer Bots",
         desc: `A web app and C++ server for personally designed WIFI soccer bots with an ESP32 microcontroller,
         L298N motor driver and custom PCBs for remote control. Constructed frontend mobile UI for joystick robot control and optimized latency with Web Socket API to link
@@ -58,6 +62,7 @@ export function Projects() {
       <MakeProject
         title={d.title}
         hook={d.hook}
+        tech={d.tech}
         overlaytitle={d.overlaytitle}
         desc={d.desc} link={d.link}
         src={d.src} />

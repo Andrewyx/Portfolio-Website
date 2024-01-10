@@ -22,7 +22,7 @@
 #landing {
   height: fit-content;
   padding-top: 10vh;
-  padding-bottom: 10vh;
+  padding-bottom: 2vh;
   padding-left: 5vw;
   padding-right: 5vw;
   display: flex;
@@ -242,10 +242,11 @@
       padding-bottom: 1rem;
     }
     span {
-      font-size: 1.1rem;
+      font-size: 1.5rem;
       font-weight: 500;
     }
     padding-bottom: 3rem;
+
   }
 }
 
@@ -267,6 +268,7 @@
   h3 {
     margin-top: 0rem;
     margin-bottom: 0rem;
+    color: white;
   }
 }
 
@@ -301,11 +303,11 @@
   position: absolute;
   top: 0;
   left: 0;
-
 }
 
 .project .cardInfo {
   position: relative;
+  height: 100%;
   z-index: 3;
   color: #fff;
   opacity: 0;
@@ -320,16 +322,23 @@
 
 .project .cardInfo h3 {
   padding: 1rem;
+  padding-top: 2rem;
   padding-bottom: 0rem;
+  line-height: 1rem;
 }
 .project .cardInfo p {
-  
   padding: 1rem;
   padding-top: 0rem;
 }
 
 
 .project button {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  margin-bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
   text-decoration: none;
   padding: 0.5rem 1rem;
   background-color: rgba(0, 0, 0, 0.507);
@@ -344,21 +353,19 @@
       var(--orchid));
   animation: background-pan 2s infinite;
   background-size: 200%;
-  transform: scale(0.95);
   box-shadow: 0 0rem 1rem 0.1rem var(--yellow);
   transition: all 0.2s ease-in-out;
 }
 
 .project .cardDesc {
-  background-color: #59226e;
+  background-color: #2d93ad;
   position: absolute;
   bottom: 0rem;
-  padding-bottom: 1rem;
   display:flex;
+  justify-content: center;
   flex-direction: column;
   min-width: 100%;
   height: 11.5rem;
-  opacity: 1;
   box-shadow: 0px 4px 2rem 0.1rem #000000;
   p {
     padding-left: 1rem;
@@ -369,10 +376,11 @@
   }
   h3 {
     padding-bottom: 0.8rem;
-    padding-top: 2rem;
     line-height: 1rem;
   }
-
+  span {
+    font-weight: bold;
+  }
 }
 .threecanvas {
   width: auto;
@@ -383,6 +391,7 @@
 
 .standardreact {
   height: fit-content;
+
   transform-origin: 50% 0; 
   -webkit-transform-origin: 50% 0;
    -ms-transform-origin: 0 0; 
@@ -442,4 +451,26 @@
   span {
     padding: 1rem;
   }
+}
+
+.horizontallink {
+  display: flex;
+  flex-direction: row;
+  width: 20rem;
+  align-content: center;
+  justify-content: space-evenly;
+  padding-bottom: 2rem;
+}
+
+.horizontallink .icon {
+  color: rgba(255, 255, 255, 0.87);
+  padding: 1rem;
+  height: 2rem;
+  transition: all 0.2s;
+  
+}
+
+.horizontallink .icon:hover {
+  color: var(--purple);
+  transform: translateY(-10px);
 }

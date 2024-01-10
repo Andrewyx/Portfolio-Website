@@ -90,7 +90,7 @@ section {
   }
 }
 
-@media screen and ((max-width: 400px) or (max-height: 900px)){
+@media screen and ((max-width: 400px) or (max-height: 700px)){
   #title {
     h1 {
       padding-top: 1rem;
@@ -125,5 +125,39 @@ section {
   }
   .sidetray {
     transform: translateX(500rem);
+  }
+
+  .horizontallink {
+    width: 18rem;
+  }
+  
+  .horizontallink .icon {
+    padding: 0rem;
+    height: 1.7rem;   
+  }
+  .standardreact {
+    font-size: 0.9rem;
+    h3 {
+      font-size: 1.3rem;
+    }
+    .project {
+      height: 28rem;
+      width: 19rem;
+    }
+    .project .cardDesc {
+    height: 9rem;
+    }
+  }
+  #footer {
+    padding: 0rem;
+    padding-top: 1rem;
+    h2 {
+      padding: 0rem;
+      font-size: 1.5rem;
+    }
+    span {
+      font-size: 0.9rem;
+      padding-top:0rem;
+    }
   }
 }
