@@ -471,6 +471,6 @@
 }
 
 .horizontallink .icon:hover {
-  color: var(--purple);
+  color: #2d93ad;
   transform: translateY(-10px);
 }
