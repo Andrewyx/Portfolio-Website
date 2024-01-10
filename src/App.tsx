@@ -1,11 +1,10 @@
 import { Suspense, useRef } from 'react';
 import './App.css';
 import { Mesh, SpotLight, SpotLightHelper } from 'three';
-
 import { Canvas, LightProps, useFrame } from "@react-three/fiber";
 import { Model } from './Walle';
 import { PerspectiveCamera, useHelper } from '@react-three/drei';
-import selfie from './selfie.jpg';
+import selfie from './assets/selfie.jpg';
 import { Projects } from './Projects';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faLinkedin, faGithub, faItchIo } from '@fortawesome/free-brands-svg-icons';
@@ -54,7 +53,7 @@ function SkillList() {
   function MakeSkill({ name }: Skill) {
     return (<div><span key={name} className='skillBoxes'>{name}</span></div>)
   }
-  const skills = ["TypeScript", "JavaScript", "Python", "C++", "C#", "Racket", "Git", "Firebase", "Unity", "Platform.io", "Inventor", "Fusion 360", "TinkerCAD", "Ultimaker Cura", "Fritzing"];
+  const skills = ["TypeScript", "JavaScript", "React", "Python", "C++", "C#", "Racket", "Git", "Firebase", "Unity", "Platform.io", "Inventor", "Fusion 360", "TinkerCAD", "Ultimaker Cura", "Fritzing"];
   const listItems = skills.map((txt) =>
     <MakeSkill name={txt.toString()} key={txt.toString()} />
   );
