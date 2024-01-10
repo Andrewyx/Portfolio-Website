@@ -1,11 +1,11 @@
 import flintgif from "./assets/flintvid.gif";
 import soccer from "./assets/soccer.jpg";
-import lift from "./assets/lift7.gif";
+import lift from "./assets/lift7-op.gif";
 import flicker from "./assets/flicker.png";
 import crossy from "./assets/crossy.png";
 import butler from "./assets/butler bot.jpg";
 import roundtable from "./assets/roundtable.png";
-
+import "./Projects.css";
 function MakeProject({ title, hook, tech, overlaytitle, desc, link, src }: Details) {
     return (
       <div className='project'>

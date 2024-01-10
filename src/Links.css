@@ -1,0 +1,46 @@
+.sidetray {
+    position: fixed;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 0;
+    height: 17rem;
+    width: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+  
+  .sidetray .icon {
+    color: rgba(255, 255, 255, 0.87);
+    padding-left: 0.5rem;
+    height: fit-content;
+    transition: all 0.2s;
+  }
+  
+  .sidetray .icon:hover {
+    color: var(--purple);
+    transform: translateX(10px);
+  }
+
+.horizontallink {
+    display: flex;
+    flex-direction: row;
+    width: 20rem;
+    align-content: center;
+    justify-content: space-evenly;
+    padding-bottom: 2rem;
+  }
+  
+  .horizontallink .icon {
+    color: rgba(255, 255, 255, 0.87);
+    padding: 1rem;
+    height: 2rem;
+    transition: all 0.2s;
+    
+  }
+  
+  .horizontallink .icon:hover {
+    color: #2d93ad;
+    transform: translateY(-10px);
+  }
