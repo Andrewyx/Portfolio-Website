@@ -120,7 +120,7 @@ export function Projects() {
       },
     ];
   
-    let listofDetails = data.map((d) => <div key={d.title}>
+    const listofDetails = data.map((d) => <div key={d.title}>
       <MakeProject
         title={d.title}
         hook={d.hook}
@@ -129,19 +129,18 @@ export function Projects() {
         desc={d.desc} link={d.link}
         src={d.src} />
     </div>);
-    listofDetails = listofDetails;
     return (
-      <>
-      <div style={{display:"flex", flexDirection: "column", }}>
-      <div style={{backgroundColor: 'red' , height: '30rem', width:'20rem', margin:"1rem"}}></div>
-      <div style={{backgroundColor: 'red' , height: '30rem', width:'20rem', margin:"1rem"}}></div>
-      <div style={{backgroundColor: 'red' , height: '30rem', width:'20rem', margin:"1rem"}}></div>
-      <div style={{backgroundColor: 'red' , height: '30rem', width:'20rem', margin:"1rem"}}></div>
-      <div style={{backgroundColor: 'red' , height: '30rem', width:'20rem', margin:"1rem"}}></div>
-      <div style={{backgroundColor: 'red' , height: '30rem', width:'20rem', margin:"1rem"}}></div>
-      </div>
-      </>
+      // <>
+      // <div style={{display:"flex", flexDirection: "column", }}>
+      // <div style={{backgroundColor: 'red' , height: '30rem', width:'20rem', margin:"1rem"}}></div>
+      // <div style={{backgroundColor: 'red' , height: '30rem', width:'20rem', margin:"1rem"}}></div>
+      // <div style={{backgroundColor: 'red' , height: '30rem', width:'20rem', margin:"1rem"}}></div>
+      // <div style={{backgroundColor: 'red' , height: '30rem', width:'20rem', margin:"1rem"}}></div>
+      // <div style={{backgroundColor: 'red' , height: '30rem', width:'20rem', margin:"1rem"}}></div>
+      // <div style={{backgroundColor: 'red' , height: '30rem', width:'20rem', margin:"1rem"}}></div>
+      // </div>
+      // </>
       
-      // <>{listofDetails}</>
+      <>{listofDetails}</>
     )
   }
