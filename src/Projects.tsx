@@ -1,6 +1,6 @@
-// import flintgif from "./assets/flintvid.gif";
+import flintgif from "./assets/flintvid.gif";
 import soccer from "./assets/soccer.jpg";
-import lift from "./assets/lift7-op.gif";
+// import lift from "./assets/lift7-op.gif";
 import flicker from "./assets/flicker.png";
 import crossy from "./assets/crossy.png";
 import butler from "./assets/butler bot.jpg";
@@ -48,7 +48,7 @@ export function Projects() {
         Support for access to multiple remote vaults on one device.
         Android/Mobile compatibility.`,
         link: `https://github.com/Andrewyx/Flint`,
-        src: crossy
+        src: flintgif
       },
       {
         title: "Soccer Bots",
@@ -70,7 +70,7 @@ export function Projects() {
         Team Grape Crush ZenoJam 2022 Submission "Uva comminuet deum" Andrew Mao, Alex Mei, Dorson Tang 2022 ZenoJam Submission inspired by Deep Rock Galactic. :) 
         play at https://zenbubbleyt.itch.io/sirius-b-lift-7`,
         link: `https://github.com/Andrewyx/Lift-7---Sirius-B`,
-        src: lift
+        src: crossy
       },
     
       {
