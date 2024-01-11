@@ -1,6 +1,6 @@
 import "./App.css";
 import { Mesh, SpotLight, SpotLightHelper } from 'three';
-import { Canvas, LightProps, useFrame } from "@react-three/fiber";
+import { Canvas, LightProps } from "@react-three/fiber";
 import { Model } from './Walle';
 import { PerspectiveCamera, useHelper } from '@react-three/drei';
 import { Suspense, useRef } from 'react';
@@ -16,14 +16,12 @@ function Light({ position = [1, 1, 1], rotation = [0, 0, 0], color = 0xFFFFFF, i
 }
 
 function Walle() {
-  const roboref = useRef<Mesh>(null!)
-  useFrame((state, delta) => {
-    if (roboref.current) {
-      // roboref.current.rotation.y -= delta * 0.2;
-      delta = delta;
-      state = state;
-    }
-  })
+  const roboref = useRef<Mesh>(null!);
+  // useFrame((_, delta) => {
+  //   if (roboref.current) {
+  //     roboref.current.rotation.y -= delta * 0.2;
+  //   }
+  // })
   return (
     <>
       <Suspense fallback={null}>
