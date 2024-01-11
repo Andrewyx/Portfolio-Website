@@ -1,4 +1,4 @@
-import flintgif from "./assets/flintvid.gif";
+// import flintgif from "./assets/flintvid.gif";
 import soccer from "./assets/soccer.jpg";
 // import lift from "./assets/lift7-op.gif";
 import flicker from "./assets/flicker.png";
@@ -48,7 +48,7 @@ export function Projects() {
         Support for access to multiple remote vaults on one device.
         Android/Mobile compatibility.`,
         link: `https://github.com/Andrewyx/Flint`,
-        src: flintgif
+        src: crossy
       },
       {
         title: "Soccer Bots",
