@@ -48,7 +48,7 @@ export function Projects() {
         Support for access to multiple remote vaults on one device.
         Android/Mobile compatibility.`,
         link: `https://github.com/Andrewyx/Flint`,
-        src: flintgif
+        src: crossy
       },
       {
         title: "Soccer Bots",
