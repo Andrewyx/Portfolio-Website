@@ -10,9 +10,6 @@ function App() {
 
   return (
     <>
-      {/* <div className='sidetray'>
-        <Links />
-      </div> */}
       <section id="landing">
         <div id="title">
           <h1>Hello, I'm </h1>
