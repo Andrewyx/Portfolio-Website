@@ -1,5 +1,5 @@
-import flintgif from "./assets/flintvid.gif";
-import soccer from "./assets/soccer.jpg";
+// import flintgif from "./assets/flintvid.gif";
+// import soccer from "./assets/soccer.jpg";
 // import lift from "./assets/lift7.gif";
 // import flicker from "./assets/flicker.png";
 // import crossy from "./assets/crossy.png";
@@ -39,30 +39,30 @@ function MakeProject({ title, hook, tech, overlaytitle, desc, link, src }: Detai
   
 export function Projects() {
     const data: Details[] = [
-      {
-        title: "Flint",
-        hook: "Obsidian Extension for cross-device file syncing powered by Firebase",
-        tech: "TypeScript | Firebase",
-        overlaytitle: "Flint",
-        desc: `Unofficial Obsidian -
-        Firebase vault sync plugin. Store your obsidian files on your own custom Firebase storage bucket for complete control over your cloud files! This plugin was made for those who want to solely manage their own data across their obsidian devices.
-        Upload/Download data to your Firebase storage bucket with the upload icon & download.
-        Support for access to multiple remote vaults on one device.
-        Android/Mobile compatibility.`,
-        link: `https://github.com/Andrewyx/Flint`,
-        src: flintgif
-      },
-      {
-        title: "Soccer Bots",
-        hook: `Remote controlled WIFI robots made to play soccer or joust!`,
-        tech: "JavaScript | WebSockets | C++",
-        overlaytitle: "Soccer Bots",
-        desc: `A web app and C++ server for personally designed WIFI soccer bots with an ESP32 microcontroller,
-        L298N motor driver and custom PCBs for remote control. Constructed frontend mobile UI for joystick robot control and optimized latency with Web Socket API to link
-        frontend to ESP32 access point server`,
-        link: `https://github.com/Andrewyx/Soccer-Bots`,
-        src: soccer
-      },
+      // {
+      //   title: "Flint",
+      //   hook: "Obsidian Extension for cross-device file syncing powered by Firebase",
+      //   tech: "TypeScript | Firebase",
+      //   overlaytitle: "Flint",
+      //   desc: `Unofficial Obsidian -
+      //   Firebase vault sync plugin. Store your obsidian files on your own custom Firebase storage bucket for complete control over your cloud files! This plugin was made for those who want to solely manage their own data across their obsidian devices.
+      //   Upload/Download data to your Firebase storage bucket with the upload icon & download.
+      //   Support for access to multiple remote vaults on one device.
+      //   Android/Mobile compatibility.`,
+      //   link: `https://github.com/Andrewyx/Flint`,
+      //   src: flintgif
+      // },
+      // {
+      //   title: "Soccer Bots",
+      //   hook: `Remote controlled WIFI robots made to play soccer or joust!`,
+      //   tech: "JavaScript | WebSockets | C++",
+      //   overlaytitle: "Soccer Bots",
+      //   desc: `A web app and C++ server for personally designed WIFI soccer bots with an ESP32 microcontroller,
+      //   L298N motor driver and custom PCBs for remote control. Constructed frontend mobile UI for joystick robot control and optimized latency with Web Socket API to link
+      //   frontend to ESP32 access point server`,
+      //   link: `https://github.com/Andrewyx/Soccer-Bots`,
+      //   src: soccer
+      // },
       // {
       //   title: "Sirius B - Lift 7",
       //   hook: `ZenoJam 7 Day Game Jam Submission`,
