@@ -18,8 +18,8 @@
     "@react-three/fiber": "^8.15.13",
     "@types/three": "^0.160.0",
     "@vercel/speed-insights": "^1.0.2",
-    "react": "^0.0.0-experimental-6639ed3b3-20240111",
-    "react-dom": "^0.0.0-experimental-6639ed3b3-20240111",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "three": "^0.160.0"
   },
   "devDependencies": {
