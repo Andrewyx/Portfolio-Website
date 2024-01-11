@@ -4,7 +4,7 @@ import { Projects } from './Projects';
 import { Links } from './Links';
 import { WalleScene } from './Model';
 import { SkillList } from './SkillBox';
-// import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
 
@@ -13,8 +13,6 @@ function App() {
       {/* <div className='sidetray'>
         <Links />
       </div> */}
-      {/* <SpeedInsights /> */}
-
       <section id="landing">
         <div id="title">
           <h1>Hello, I'm </h1>
@@ -82,7 +80,7 @@ function App() {
         </a>
         <span>Website made by Andrew Mao 2024 <br />
           andrewmaobc@gmail.com</span>
-
+          <SpeedInsights /> 
       </div>
     </>
   )
