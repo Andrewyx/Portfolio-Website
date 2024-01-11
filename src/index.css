@@ -20,7 +20,7 @@ body {
   display: flex;
   flex-direction: column;
   align-content: center;
-  min-width: 320px;
+  /* min-width: 320px; */
   min-height: 100vh;
   margin-bottom: 0rem;
   padding-bottom: 0rem;
@@ -67,7 +67,7 @@ section {
     margin:0;
     padding:0;
     width: 100%;
-    min-width: 350px;
+    /* min-width: 350px; */
     overflow-x: hidden;
 }
   #title {
