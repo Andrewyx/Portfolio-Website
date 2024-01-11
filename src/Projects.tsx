@@ -1,4 +1,4 @@
-import flintgif from "./assets/flintvid.gif";
+// import flintgif from "./assets/flintvid.gif";
 import soccer from "./assets/soccer.jpg";
 import lift from "./assets/lift7-op.gif";
 import flicker from "./assets/flicker.png";
