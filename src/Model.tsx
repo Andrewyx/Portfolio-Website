@@ -19,7 +19,8 @@ function Walle() {
   const roboref = useRef<Mesh>(null!)
   useFrame((state, delta) => {
     if (roboref.current) {
-      roboref.current.rotation.y -= delta * 0.2;
+      // roboref.current.rotation.y -= delta * 0.2;
+      delta = delta;
       state = state;
     }
   })

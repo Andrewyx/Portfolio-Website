@@ -2,7 +2,7 @@ import './App.css';
 import selfie from './assets/selfie.jpg';
 import { Projects } from './Projects';
 import { Links } from './Links';
-// import { WalleScene } from './Model';
+import { WalleScene } from './Model';
 import { SkillList } from './SkillBox';
 import { SpeedInsights } from "@vercel/speed-insights/react"
 
@@ -29,7 +29,7 @@ function App() {
             <span className='titlespan'>Programmer</span>
           </div>
         </div>
-        {/* <WalleScene /> */}
+        <WalleScene />
         <a href='mailto:andrewmaobc@gmail.com'>
           <button id="contact">Contact Me</button>
         </a>
