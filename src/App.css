@@ -6,17 +6,14 @@
   --offwhite: #FFF7D4;
   --yellow: #FFD95A;
   --orchid: #C07F00;
-  --brown: #4C3D3D;
-  
+  --brown: #4C3D3D;  
 }
-
 
 #title {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-
 }
 
 #landing {
@@ -260,7 +257,6 @@
 
 .standardreact {
   height: fit-content;
-
   transform-origin: 50% 0; 
   -webkit-transform-origin: 50% 0;
    -ms-transform-origin: 0 0; 

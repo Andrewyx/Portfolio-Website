@@ -31,8 +31,6 @@ function Walle() {
 
         <mesh ref={roboref}>
           <Model scale={25} position={[-0.5, 0, 0]} />
-          {/* <boxGeometry />
-          <meshStandardMaterial color={"mediumpurple"} /> */}
         </mesh>
 
       </Suspense>

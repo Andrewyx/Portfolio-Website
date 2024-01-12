@@ -7,7 +7,6 @@ import { SkillList } from './SkillBox';
 import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
-
   return (
     <>
       <section id="landing">
@@ -17,7 +16,6 @@ function App() {
             <h1 style={{ display: "inline" }} id="name">Andrew</h1>
             <h1 style={{ display: "inline" }}>!</h1>
           </ div>
-
         </div>
         <div id="snippet">
           <p>I am a </p>
@@ -77,7 +75,7 @@ function App() {
         </a>
         <span>Website made by Andrew Mao 2024 <br />
           andrewmaobc@gmail.com</span>
-          <SpeedInsights /> 
+        <SpeedInsights />
       </div>
     </>
   )

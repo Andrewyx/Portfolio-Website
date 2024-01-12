@@ -1,4 +1,3 @@
-// import flintgif from "./assets/flintvid-op.gif";
 import flintgif from "./assets/flintvid-op.mp4";
 import soccer from "./assets/soccer-op.jpg";
 import lift from "./assets/lift7-op.mp4";
@@ -8,14 +7,13 @@ import butler from "./assets/butlerbot-op.jpg";
 import roundtable from "./assets/roundtable.png";
 import "./Projects.css";
 
-
 function MakeProject({ title, hook, tech, overlaytitle, desc, link, img, vid }: Details) {
   let media;
   if (vid) {
     media = <video autoPlay loop muted src={vid}></video>
   }
   else {
-    media = <img src={img} alt="Missing"></img>
+    media = <img src={img} alt={title}></img>
   }
     return (
       <div className='project'>
@@ -24,7 +22,6 @@ function MakeProject({ title, hook, tech, overlaytitle, desc, link, img, vid }: 
           <h3>{title}</h3>
           <span style={{padding:"0rem", color:"white"}}>{tech}</span>
           <p>{hook}</p>
-          
         </div>
         <div className='cardInfo'>
           <h3>{overlaytitle}</h3>
@@ -139,18 +136,7 @@ export function Projects() {
         img={d.img}
         vid={d.vid} />
     </div>);
-    return (
-      // <>
-      // <div style={{display:"flex", flexDirection: "column", }}>
-      // <div style={{backgroundColor: 'red' , height: '30rem', width:'20rem', margin:"1rem"}}></div>
-      // <div style={{backgroundColor: 'red' , height: '30rem', width:'20rem', margin:"1rem"}}></div>
-      // <div style={{backgroundColor: 'red' , height: '30rem', width:'20rem', margin:"1rem"}}></div>
-      // <div style={{backgroundColor: 'red' , height: '30rem', width:'20rem', margin:"1rem"}}></div>
-      // <div style={{backgroundColor: 'red' , height: '30rem', width:'20rem', margin:"1rem"}}></div>
-      // <div style={{backgroundColor: 'red' , height: '30rem', width:'20rem', margin:"1rem"}}></div>
-      // </div>
-      // </>
-      
+    return (     
       <>{listofDetails}</>
     )
   }
