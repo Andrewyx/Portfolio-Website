@@ -1,5 +1,5 @@
 // import flintgif from "./assets/flintvid-op.gif";
-import flintgif from "./assets/flintvid.mp4";
+import flintgif from "./assets/flintvid-op.mp4";
 import soccer from "./assets/soccer-op.jpg";
 import lift from "./assets/lift7-op.mp4";
 import flicker from "./assets/flicker.png";
