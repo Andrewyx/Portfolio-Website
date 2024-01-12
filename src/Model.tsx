@@ -41,7 +41,7 @@ export function WalleScene() {
     return (
     <div className='threecanvas'>
     <Suspense fallback={null}>
-      <Canvas frameloop="demand">
+      <Canvas>
         <PerspectiveCamera makeDefault position={[0, 3, 7]} rotation={[-0.4, 0, 0]} />
         <Walle />
       </Canvas>
