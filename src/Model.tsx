@@ -1,9 +1,10 @@
 import "./App.css";
 import { Mesh, SpotLight, SpotLightHelper } from 'three';
 import { Canvas, LightProps, useFrame } from "@react-three/fiber";
-// import { Model } from './Walle';
+import { Model } from './Walle';
 import { PerspectiveCamera, useHelper } from '@react-three/drei';
 import { Suspense, useRef } from 'react';
+import { useInView } from "react-intersection-observer";
 
 const PI: number = Math.PI;
 
@@ -29,9 +30,9 @@ function Walle() {
         <Light position={[-4, 3, 4]} rotation={[-PI, 0, -PI]} intensity={40} />
 
         <mesh ref={roboref}>
-          {/* <Model scale={25} position={[-0.5, 0, 0]} /> */}
-          <boxGeometry />
-          <meshStandardMaterial color={"mediumpurple"} />
+          <Model scale={25} position={[-0.5, 0, 0]} />
+          {/* <boxGeometry />
+          <meshStandardMaterial color={"mediumpurple"} /> */}
         </mesh>
 
       </Suspense>
@@ -39,11 +40,16 @@ function Walle() {
   )
 }
 
+const DisableRender = () => useFrame(() => null, 1000);
+
 export function WalleScene() {
+
+  const { ref, inView } = useInView();
     return (
-    <div className='threecanvas'>
+    <div ref={ref} className='threecanvas'>
     <Suspense fallback={null}>
       <Canvas>
+        {!inView && <DisableRender />}
         <PerspectiveCamera makeDefault position={[0, 3, 7]} rotation={[-0.4, 0, 0]} />
         <Walle />
       </Canvas>

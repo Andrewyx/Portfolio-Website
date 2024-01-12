@@ -1,6 +1,7 @@
-import flintgif from "./assets/flintvid-op.gif";
+// import flintgif from "./assets/flintvid-op.gif";
+import flintgif from "./assets/flintvid.mp4";
 import soccer from "./assets/soccer-op.jpg";
-import lift from "./assets/lift7-op.gif";
+import lift from "./assets/lift7-op.mp4";
 import flicker from "./assets/flicker.png";
 import crossy from "./assets/crossy.png";
 import butler from "./assets/butlerbot-op.jpg";
@@ -8,10 +9,17 @@ import roundtable from "./assets/roundtable.png";
 import "./Projects.css";
 
 
-function MakeProject({ title, hook, tech, overlaytitle, desc, link, src }: Details) {
+function MakeProject({ title, hook, tech, overlaytitle, desc, link, img, vid }: Details) {
+  let media;
+  if (vid) {
+    media = <video autoPlay loop muted src={vid}></video>
+  }
+  else {
+    media = <img src={img} alt="Missing"></img>
+  }
     return (
       <div className='project'>
-        <img src={src} alt="Missing"></img>
+        {media}
         <div className='cardDesc'>
           <h3>{title}</h3>
           <span style={{padding:"0rem", color:"white"}}>{tech}</span>
@@ -34,7 +42,8 @@ function MakeProject({ title, hook, tech, overlaytitle, desc, link, src }: Detai
     overlaytitle: string;
     desc: string;
     link: string;
-    src: string;
+    img?: string;
+    vid?: string;
   }
   
 export function Projects() {
@@ -50,7 +59,7 @@ export function Projects() {
         Support for access to multiple remote vaults on one device.
         Android/Mobile compatibility.`,
         link: `https://github.com/Andrewyx/Flint`,
-        src: flintgif
+        vid: flintgif
       },
       {
         title: "Soccer Bots",
@@ -61,7 +70,7 @@ export function Projects() {
         L298N motor driver and custom PCBs for remote control. Constructed frontend mobile UI for joystick robot control and optimized latency with Web Socket API to link
         frontend to ESP32 access point server`,
         link: `https://github.com/Andrewyx/Soccer-Bots`,
-        src: soccer
+        img: soccer
       },
       {
         title: "Sirius B - Lift 7",
@@ -72,7 +81,7 @@ export function Projects() {
         Team Grape Crush ZenoJam 2022 Submission "Uva comminuet deum" Andrew Mao, Alex Mei, Dorson Tang 2022 ZenoJam Submission inspired by Deep Rock Galactic. :) 
         play at https://zenbubbleyt.itch.io/sirius-b-lift-7`,
         link: `https://github.com/Andrewyx/Lift-7---Sirius-B`,
-        src: lift
+        vid: lift
       },
     
       {
@@ -84,7 +93,7 @@ export function Projects() {
         Built using Unity Game Engine, C#, and custom pixel art with LibreSprite
         play at https://andrewyx.itch.io/flicker`,
         link: `https://github.com/Andrewyx/Flicker`,
-        src: flicker
+        img: flicker
       },
       {
         title: "Collidy Road",
@@ -95,7 +104,7 @@ export function Projects() {
         Designed during the two-day Game Maker’s Toolkit (GMTK) Game Jam with the theme of ROLES REVERSED. Team Watercooler - Minerva Wang, Andrew Mao, Randy Zhu, Jennifer Park.
         play at https://andrewyx.itch.io/collidyroad`,
         link: `https://github.com/Andrewyx/CollidyRoad-GMTK23`,
-        src: crossy
+        img: crossy
       },
       {
         title: "Butler Bot",
@@ -105,7 +114,7 @@ export function Projects() {
         desc: `Uses OpenCV on a Raspberry Pi 3B+ and a WROOM ESP32 for autonomous tracking and navigation with fiducials. 
         Also contains additional wifi driving option with joystick controls on any device`,
         link: `https://github.com/Andrewyx/ButlerBot`,
-        src: butler
+        img: butler
       },
       {
         title: "Roundtable",
@@ -116,7 +125,7 @@ export function Projects() {
         Uses selenium to scrape the UBC Gather kitchen lunch/dinner menu for the current date.
         Stores pulled menu locally in cached txt file and can be configured with Windows Task Scheduler for daily updates`,
         link: `https://github.com/Andrewyx/Roundtable`,
-        src: roundtable
+        img: roundtable
       },
     ];
   
@@ -127,7 +136,8 @@ export function Projects() {
         tech={d.tech}
         overlaytitle={d.overlaytitle}
         desc={d.desc} link={d.link}
-        src={d.src} />
+        img={d.img}
+        vid={d.vid} />
     </div>);
     return (
       // <>
