@@ -1,5 +1,5 @@
 .project {
-
+    position: relative;
     background-color: rgba(255, 255, 255, 0.048);
     border: 1px solid rgba(255, 255, 255, 0.03);
     border-radius: 1rem;
