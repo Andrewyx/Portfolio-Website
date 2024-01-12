@@ -1,7 +1,7 @@
 import "./App.css";
 import { Mesh, SpotLight, SpotLightHelper } from 'three';
 import { Canvas, LightProps, useFrame } from "@react-three/fiber";
-import { Model } from './Walle';
+// import { Model } from './Walle';
 import { PerspectiveCamera, useHelper } from '@react-three/drei';
 import { Suspense, useRef } from 'react';
 
@@ -29,7 +29,9 @@ function Walle() {
         <Light position={[-4, 3, 4]} rotation={[-PI, 0, -PI]} intensity={40} />
 
         <mesh ref={roboref}>
-          <Model scale={25} position={[-0.5, 0, 0]} />
+          {/* <Model scale={25} position={[-0.5, 0, 0]} /> */}
+          <boxGeometry />
+          <meshStandardMaterial color={"mediumpurple"} />
         </mesh>
 
       </Suspense>
