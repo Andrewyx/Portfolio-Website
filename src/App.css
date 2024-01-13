@@ -186,6 +186,10 @@
     transition: all 0.2s ease-in-out;
     padding: 0.3rem;
     margin-top: 6rem;
+    button {
+      border: 1px solid rgba(255, 255, 255, 0.87);;
+    }
+
     div {
       background-color: #181818;
       border-radius: 2rem;

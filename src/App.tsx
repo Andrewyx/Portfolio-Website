@@ -1,10 +1,12 @@
 import './App.css';
 import selfie from './assets/selfie.jpg';
+import resume from "./assets/Resume2023Dec.pdf"
 import { Projects } from './Projects';
 import { Links } from './Links';
 import { WalleScene } from './Model';
 import { SkillList } from './SkillBox';
 import { SpeedInsights } from "@vercel/speed-insights/react"
+
 
 function App() {
   return (
@@ -42,9 +44,9 @@ function App() {
             <p>I have a mixed background in software and hardware design,
               with experience with languages such as Python, C++, and C#.
               I am a hardware hobbyist with proficiency in many design programs
-              such as Autodesk Inventor, Fusion360, Ultimaker Cura, Fritzing, and the Arduino IOT Cloud.
+              such as Autodesk Inventor, Fusion360, Ultimaker Cura, Fritzing, and the Arduino IOT Cloud. The WallE rendered above was designed by me in CAD from an old project!
               I absolutely adore game design, so if you ever have an idea you would like to share or
-              would simply like to try out some of my projects, I would love to connect with you!
+              would simply like to try out some of my projects, I would love to connect with you! 
             </p>
             <img src={selfie} alt='Andrew'></img>
           </div>
@@ -52,6 +54,9 @@ function App() {
             <div>
               <h3>Skills and Technologies</h3>
               <SkillList />
+              <a href={resume}>
+                <button id="contact">Resume</button>
+              </a>
             </div>
           </div>
         </section>
