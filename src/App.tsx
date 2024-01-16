@@ -41,12 +41,13 @@ function App() {
         <section id="about">
           <h2>About Me</h2>
           <div>
-            <p>I have a mixed background in software and hardware design,
-              with experience with languages such as Python, C++, and C#.
-              I am a hardware hobbyist with proficiency in many design programs
-              such as Autodesk Inventor, Fusion360, Ultimaker Cura, Fritzing, and the Arduino IOT Cloud. The WallE rendered above was designed by me in CAD from an old project!
-              I absolutely adore game design, so if you ever have an idea you would like to share or
-              would simply like to try out some of my projects, I would love to connect with you! 
+            <p> Using code to build solutions is my goal as a programmer.
+              As a lover of both software and hardware, many of my projetcs involve mixing these two aspects of design. 
+              From making my own CAD models, to making my own circuit boards and programming them, I enjoy all parts of the design process. 
+              Even the WallE rendered above was designed by me in CAD from an old project and ported into a mesh with three.js!
+              Currently, I'm a software technical member of the University of British Columbia's "ThunerBots" competetive soccer robotics team. 
+              Laslty, I absolutely adore game design, so if you ever have an idea you would like to share or
+              would like to compete in a Game Jam with me, I would love to connect with you! 
             </p>
             <img src={selfie} alt='Andrew'></img>
           </div>
