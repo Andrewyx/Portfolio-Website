@@ -1,6 +1,6 @@
 import './App.css';
 import selfie from './assets/selfie.jpg';
-import resume from "./assets/Resume2023Dec.pdf"
+import resume from "./assets/ResumeJan2024.pdf"
 import { Projects } from './Projects';
 import { Links } from './Links';
 import { WalleScene } from './Model';
