@@ -71,12 +71,14 @@ section {
     overflow-x: hidden;
 }
   #title {
+    
     h1 {
       margin-bottom: 0rem;
       line-height: normal;
       font-size: 5rem;
       #name {
         margin-left: 0.5rem;
+        margin-bottom: 1rem;
       }
     }
   }
