@@ -72,17 +72,17 @@ function App() {
           </div>
         </section>
       </section>
-      <div id="footer">
-
-        <h2>Come chat with me!</h2>
-
-        <a href='mailto:andrewmaobc@gmail.com'>
-          <button id="contact">Contact Me</button>
-        </a>
-        <span>Website made by Andrew Mao 2024 <br />
-          andrewmaobc@gmail.com</span>
-        <SpeedInsights />
+      <div className='footerwrapper'>
+        <div id="footer">
+          <h2>Come chat with me!</h2>
+          <a href='mailto:andrewmaobc@gmail.com'>
+            <button id="contact">Contact Me</button>
+          </a>
+          <span>Website made by Andrew Mao 2024 <br />
+            andrewmaobc@gmail.com</span>
+        </div>
       </div>
+      <SpeedInsights />
     </>
   )
 }

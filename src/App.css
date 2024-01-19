@@ -275,9 +275,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #c0800075;
-  padding: 2rem;
-  padding-top: 2rem;
+  background-color: #181818;
+  padding: 1rem;
+  padding-top: 0rem;
   h2 {
     padding: 1rem;
   }
@@ -296,4 +296,21 @@
   span {
     padding: 1rem;
   }
+}
+
+.footerwrapper {
+  background-image: linear-gradient(to right,
+  var(--orchid),
+  var(--offwhite),
+  var(--yellow),
+  var(--orchid),
+  var(--brown),
+  var(--orchid));
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  animation: background-pan 4s infinite;
+  background-size: 200%;
+  transition: all 0.2s ease-in-out;
+  padding: 0.2rem;
+  margin-top: 6rem;  
 }
