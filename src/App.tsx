@@ -1,6 +1,6 @@
 import './App.css';
 import selfie from './assets/selfie.jpg';
-import resume from "./assets/Resume2023Dec.pdf"
+import resume from "./assets/ResumeJan2024.pdf"
 import { Projects } from './Projects';
 import { Links } from './Links';
 import { WalleScene } from './Model';
@@ -45,7 +45,7 @@ function App() {
               As a lover of both software and hardware, many of my projetcs involve mixing these two aspects of design. 
               From making my own CAD models, to making my own circuit boards and programming them, I enjoy all parts of the design process. 
               Even the WallE rendered above was designed by me in CAD from an old project and ported into a mesh with three.js!
-              Currently, I'm a software technical member of the University of British Columbia's "ThunerBots" competetive soccer robotics team. 
+              Currently, I'm a software technical member of the University of British Columbia's "ThunderBots" competetive soccer robotics team. 
               Laslty, I absolutely adore game design, so if you ever have an idea you would like to share or
               would like to compete in a Game Jam with me, I would love to connect with you! 
             </p>
