@@ -5,6 +5,7 @@ import flicker from "./assets/flicker.png";
 import crossy from "./assets/crossy.png";
 import butler from "./assets/butlerbot-op.jpg";
 import roundtable from "./assets/roundtable.png";
+import slack from "./assets/slack.png";
 import "./Projects.css";
 
 function MakeProject({ title, hook, tech, overlaytitle, desc, link, img, vid }: Details) {
@@ -45,6 +46,19 @@ function MakeProject({ title, hook, tech, overlaytitle, desc, link, img, vid }: 
   
 export function Projects() {
     const data: Details[] = [
+      {
+        title: "SLack Off",
+        hook: "Experience education tailored to your needs powered by OpenAI!",
+        tech: "React | OpenAI | Flask",
+        overlaytitle: "SLack Off",
+        desc: `"SLack Off" doesn't just summarize lectures; it revolutionizes your learning journey with a personalized touch. 
+        Unlike other AI lecture notetakers, it doesn't just regurgitate information – it provides you personalized study plans, summaries of powerpoints and lecture audio, 
+        and generates relevant practice problems based on your class material 
+        -- so you don't have to zone out or be confused in class again`,
+        link: `https://www.slackoff.tech/`,
+        img: slack
+      },
+      
       {
         title: "Flint",
         hook: "Obsidian Extension for cross-device file syncing powered by Firebase",
