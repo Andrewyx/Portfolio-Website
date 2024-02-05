@@ -34,6 +34,6 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "r3f-pack": "^2.6.2",
     "typescript": "^5.2.2",
-    "vite": "^5.0.8"
+    "vite": "^5.0.12"
   }
 }
