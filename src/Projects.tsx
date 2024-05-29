@@ -6,6 +6,8 @@ import crossy from "./assets/crossy.png";
 import butler from "./assets/butlerbot-op.jpg";
 import roundtable from "./assets/roundtable.png";
 import slack from "./assets/slack.png";
+import loopy from "./assets/loopy.png";
+import latent from "./assets/latent.jpg";
 import "./Projects.css";
 
 function MakeProject({ title, hook, tech, overlaytitle, desc, link, img, vid }: Details) {
@@ -46,6 +48,26 @@ function MakeProject({ title, hook, tech, overlaytitle, desc, link, img, vid }: 
   
 export function Projects() {
     const data: Details[] = [
+      {
+        title: "Loopy",
+        hook: "Navigate the city like a local!",
+        tech: "React | Firebase | Places API",
+        overlaytitle: "Loopy",
+        desc: `Loopy is a community-driven ratings aggregation and trip planning site that takes origin and destination inputs and displays ratings for each bus/skytrain. 
+        Users can also add ratings for each of the aformentioned criteria to transit lines they have taken to help inform the Metro Vancouver community on whether they may want to reconsider their travel routes!`,
+        link: `https://loopy-423720.web.app/`,
+        img: loopy
+      },
+      {
+        title: "LaTent",
+        hook: "A Mathematician's Guide to the Universe",
+        tech: "Java | Swing | JUnit",
+        overlaytitle: "LaTent",
+        desc: `Everyone remembers their first introduction to LaTeX and it was never pleasant. From University math courses to making resumes or anything PDF related, LaTeX is infamous for its sharp learning curve. 
+        LaTent is a remedy the challenges of memorizing and familiarizing the nature of LaTex commands and is not only geered towards students but all new users to LaTex.`,
+        link: `https://github.com/Andrewyx/LaTenT`,
+        img: latent
+      },
       {
         title: "SLack Off",
         hook: "Experience education tailored to your needs powered by OpenAI!",
