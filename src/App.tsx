@@ -6,6 +6,7 @@ import { Links } from './Links';
 import { WalleScene } from './Model';
 import { SkillList } from './SkillBox';
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import Experience from './Experience';
 
 
 function App() {
@@ -62,10 +63,20 @@ function App() {
           </div>
         </section>
 
+        <section id='experiencewrapper'>
+          <div id='sectiontitle'>
+            <h2>Experience</h2>
+            <span className='subheading'>Some people I have worked with!</span>
+          </div>
+          <div id='experience'>
+            <Experience />
+          </div>
+        </section>
+
         <section id='projectwrapper'>
-          <div id="projecttitle">
+          <div id="sectiontitle">
             <h2>Projects</h2>
-            <span>Some projects that I have worked on!</span>
+            <span className='subheading'>Some projects that I have worked on!</span>
           </div>
           <div id='projects'>
             <Projects />

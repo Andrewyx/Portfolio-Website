@@ -1,0 +1,41 @@
+#experience div {
+    color: rgba(255, 255, 255, 0.87);
+}
+
+#accordianheader {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    font-size: large;
+}
+
+#accordian {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    background-color: var(--darkgrey);
+    border-radius: 0.5rem;
+    margin: 1rem;
+}
+.MuiCollapse-wrapperInner {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    div {
+        text-align: left;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+#accordianbody {
+    padding-top: 0;
+}
+
+.MuiAccordionSummary-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    .date {
+        font-size: medium;
+    }
+}

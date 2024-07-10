@@ -7,6 +7,8 @@
   --yellow: #FFD95A;
   --orchid: #C07F00;
   --brown: #4C3D3D;  
+  --darkgrey: rgba(255, 255, 255, 0.048);
+  --lightgrey:rgba(88, 88, 88, 0.671);
 }
 
 #title {
@@ -209,7 +211,6 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-  
       border-radius: 1.5rem;
   
       div {
@@ -222,7 +223,7 @@
         align-items: center;
         font-size: 1.3rem;
         border-radius: 0.5rem;
-        background-color: rgba(255, 255, 255, 0.048);
+        background-color: var(--darkgrey);
         line-height: 0rem;
         padding: 1rem;
         margin: 0.1rem;
@@ -242,17 +243,22 @@
 #projectwrapper {
   margin: 1rem;
   padding:0rem;
-  #projecttitle {
-    h2 {
-      padding-bottom: 1rem;
-    }
-    span {
-      font-size: 1.5rem;
-      font-weight: 500;
-    }
-    padding-bottom: 3rem;
 
+}
+#sectiontitle {
+  h2 {
+    padding-bottom: 1rem;
   }
+  padding-bottom: 3rem;
+}
+#experiencewrapper {
+  margin: 1rem;
+  padding:0rem;
+}
+
+.subheading {
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 
