@@ -6,7 +6,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function Experience() {
     return(
-        <div>
+        <>
         <Accordion id='accordian'>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
@@ -67,6 +67,6 @@ export default function Experience() {
             </ul>
           </AccordionDetails>
         </Accordion>
-      </div>
+      </>
     )
 }

@@ -1,0 +1,16 @@
+@media  screen and (max-width: 950px) {
+    #githubwrapper {
+        width: 60vw;
+    }
+}
+
+#githubwrapper {
+    margin-top: 6rem;
+    width: auto;
+    width: 85vw;
+    margin-bottom: auto;
+    text, div {
+        font-size: large;
+        padding: 0rem;
+    }
+}

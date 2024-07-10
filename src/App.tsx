@@ -7,6 +7,7 @@ import { WalleScene } from './Model';
 import { SkillList } from './SkillBox';
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import Experience from './Experience';
+import GitHub from './GitHub';
 
 
 function App() {
@@ -52,6 +53,11 @@ function App() {
             </p>
             <img src={selfie} alt='Andrew'></img>
           </div>
+          
+          <section id='githubwrapper'>
+            <GitHub />
+          </section>
+          
           <div id='skillcontainer'>
             <div>
               <h3>Skills and Technologies</h3>

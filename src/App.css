@@ -39,7 +39,6 @@
 
   #name {
     margin-left: 1rem;
-    
     background-image: linear-gradient(to right,
         var(--orchid),    
         var(--yellow),
@@ -169,6 +168,10 @@
     padding: 1.5rem;
     align-items: center;
     
+    p {
+      margin-bottom: 6rem;
+    }
+
     img {
       margin: 1rem;
       width: 15rem;

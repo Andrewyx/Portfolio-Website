@@ -2,6 +2,13 @@
     color: rgba(255, 255, 255, 0.87);
 }
 
+#experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #accordianheader {
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
@@ -13,6 +20,7 @@
     background-color: var(--darkgrey);
     border-radius: 0.5rem;
     margin: 1rem;
+    max-width: 60%;
 }
 .MuiCollapse-wrapperInner {
     border-bottom-left-radius: 0.5rem;
