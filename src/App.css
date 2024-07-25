@@ -9,6 +9,7 @@
   --brown: #4C3D3D;  
   --darkgrey: rgba(255, 255, 255, 0.048);
   --lightgrey:rgba(88, 88, 88, 0.671);
+  --lightgreytext: rgb(156, 156, 156);
 }
 
 #title {
@@ -248,7 +249,7 @@
   padding:0rem;
 
 }
-#sectiontitle {
+.sectiontitle {
   h2 {
     padding-bottom: 1rem;
   }

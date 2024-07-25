@@ -1,13 +1,13 @@
 import './App.css';
 import selfie from './assets/selfie.jpg';
 import resume from "./assets/Resume2024July.pdf"
-import { Projects } from './Projects';
-import { Links } from './Links';
-import { WalleScene } from './Model';
-import { SkillList } from './SkillBox';
+import { Projects } from './Components/Projects/Projects';
+import { Links } from './Components/Links/Links';
+import { WalleScene } from './Components/Misc/Model';
+import { SkillList } from './Components/Misc/SkillBox';
 import { SpeedInsights } from "@vercel/speed-insights/react"
-import Experience from './Experience';
-import GitHub from './GitHub';
+import Experience from './Components/Experience/Experience';
+import GitHub from './Components/GitHub/GitHub';
 
 
 function App() {
@@ -70,7 +70,7 @@ function App() {
         </section>
 
         <section id='experiencewrapper'>
-          <div id='sectiontitle'>
+          <div className='sectiontitle'>
             <h2>Experience</h2>
             <span className='subheading'>Some people I have worked with!</span>
           </div>
@@ -80,7 +80,7 @@ function App() {
         </section>
 
         <section id='projectwrapper'>
-          <div id="sectiontitle">
+          <div className="sectiontitle">
             <h2>Projects</h2>
             <span className='subheading'>Some projects that I have worked on!</span>
           </div>

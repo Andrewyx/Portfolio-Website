@@ -1,4 +1,4 @@
-import "./App.css";
+import "../../App.css";
 import { Mesh, SpotLight, SpotLightHelper } from 'three';
 import { Canvas, LightProps, useFrame } from "@react-three/fiber";
 import { Model } from './Walle';

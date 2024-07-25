@@ -43,7 +43,24 @@
     align-items: center;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    .date {
-        font-size: medium;
-    }
+
+}
+
+#experience div .MuiAccordionSummary-content .date {
+    font-size: medium;
+    color: var(--lightgreytext);
+}
+
+.experienceimage img {
+    object-fit: contain;
+    max-width:100%;
+    width: 100%;    
+    overflow: hidden;
+    border-radius: 0.2rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.8);
+}
+
+#accordianbody .experienceimage {
+    margin: 1rem;
+    padding: 0rem;
 }

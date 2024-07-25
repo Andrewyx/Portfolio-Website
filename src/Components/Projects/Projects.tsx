@@ -1,13 +1,13 @@
-import flintgif from "./assets/flintvid-op.mp4";
-import soccer from "./assets/soccer-op.jpg";
-import lift from "./assets/lift7-op.mp4";
-import flicker from "./assets/flicker.png";
-import crossy from "./assets/crossy.png";
-import butler from "./assets/butlerbot-op.jpg";
-import roundtable from "./assets/roundtable.png";
-import slack from "./assets/slack.png";
-import loopy from "./assets/loopy.png";
-import latent from "./assets/latent.jpg";
+import flintgif from "./../../assets/flintvid-op.mp4";
+import soccer from "./../../assets/soccer-op.jpg";
+import lift from "./../../assets/lift7-op.mp4";
+import flicker from "./../../assets/flicker.png";
+import crossy from "./../../assets/crossy.png";
+import butler from "./../../assets/butlerbot-op.jpg";
+import roundtable from "./../../assets/roundtable.png";
+import slack from "./../../assets/slack.png";
+import loopy from "./../../assets/loopy.png";
+import latent from "./../../assets/latent.jpg";
 import "./Projects.css";
 
 function MakeProject({ title, hook, tech, overlaytitle, desc, link, img, vid }: Details) {
@@ -35,16 +35,16 @@ function MakeProject({ title, hook, tech, overlaytitle, desc, link, img, vid }: 
         </div>
       </div>)}
   
-  interface Details {
-    title: string;
-    hook: string;
-    tech: string;
-    overlaytitle: string;
-    desc: string;
-    link: string;
-    img?: string;
-    vid?: string;
-  }
+interface Details {
+  title: string;
+  hook: string;
+  tech: string;
+  overlaytitle: string;
+  desc: string;
+  link: string;
+  img?: string;
+  vid?: string;
+}
   
 export function Projects() {
     const data: Details[] = [
