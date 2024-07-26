@@ -44,7 +44,7 @@ export default function Experience() {
         desc: `President of the largest STEM-related club at HMS. Directed club operations and leadership across three years resulting in club growth from 40 to 100 members. 
               Co-founded district-wide STEM initiative consisting of over 120 members in collaboration with the University of Victoria, Kwantlen Polytechnic University, 
               and Simon Fraser University to promote education accessibility.`,
-        link: `https://www.ubcthunderbots.ca/`,
+        link: `https://hmsengineeringclub.weebly.com/`,
         img: hms
       }
     ]
@@ -85,6 +85,9 @@ function MakeExperience({ title, date, position, desc, link, img, vid }: Experie
           <div className='experienceimage'>{media}</div>
           <h4>{position}</h4>
             <p>{desc}</p>
-            { link ? <a href={link}>{link}</a> : <></>} 
+            { link ? 
+            <div className='contactbutton'>
+              <a href={link}><button>See More</button></a>
+              </div> : <></>} 
           </AccordionDetails>
         </Accordion>)}

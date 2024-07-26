@@ -34,6 +34,7 @@
 
 #experience .accordianbody {
     padding-top: 0;
+
 }
 
 .MuiAccordionSummary-content {
@@ -43,7 +44,6 @@
     align-items: center;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-
 }
 
 .MuiPaper-root .MuiButtonBase-root {
@@ -78,9 +78,35 @@
 
 #experience .experienceimage {
     margin-top: 1.5rem;
-
     padding: 0rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+#experience .contactbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+#experience button {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: rgba(20, 20, 20, 0.623);
+    border-radius: 1rem;
+}
+
+#experience button:hover {
+    background-image: linear-gradient(to right,
+        var(--orchid),
+        var(--yellow),
+        var(--orchid),
+        var(--orchid));
+    animation: background-pan 2s infinite;
+    background-size: 200%;
+    box-shadow: 0 0rem 1rem 0.1rem var(--yellow);
+    transition: all 0.2s ease-in-out;
+}
+
