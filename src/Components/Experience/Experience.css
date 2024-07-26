@@ -9,13 +9,13 @@
     align-items: center;
 }
 
-#accordianheader {
+#experience .accordianheader {
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
     font-size: large;
 }
 
-#accordian {
+#experience .accordian {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
     background-color: var(--darkgrey);
     border-radius: 0.5rem;
@@ -32,7 +32,7 @@
     }
 }
 
-#accordianbody {
+#experience .accordianbody {
     padding-top: 0;
 }
 
@@ -46,6 +46,12 @@
 
 }
 
+.MuiPaper-root .MuiButtonBase-root {
+    border: 1px outset  var(--yellow);
+    border-radius: 0.5rem;
+
+}
+
 #experience div .MuiAccordionSummary-content .date {
     font-size: medium;
     color: var(--lightgreytext);
@@ -54,13 +60,27 @@
 .experienceimage img {
     object-fit: contain;
     max-width:100%;
-    width: 100%;    
+    max-height: 15rem;
     overflow: hidden;
     border-radius: 0.2rem;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.8);
 }
 
-#accordianbody .experienceimage {
-    margin: 1rem;
+.experienceimage video {
+    object-fit: contain;
+    max-width:100%;
+    max-height: 100%;
+    overflow: hidden;
+    border-radius: 0.2rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.8);
+}
+
+
+#experience .experienceimage {
+    margin-top: 1.5rem;
+
     padding: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
