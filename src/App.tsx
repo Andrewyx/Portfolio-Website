@@ -1,6 +1,6 @@
 import './App.css';
 import selfie from './assets/selfie.jpg';
-import resume from "./assets/Resume2024July.pdf"
+import resume from "./assets/ResumeCoopShort.pdf"
 import { Projects } from './Components/Projects/Projects';
 import { Links } from './Components/Links/Links';
 import { WalleScene } from './Components/Misc/Model';
