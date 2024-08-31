@@ -8,6 +8,7 @@ import roundtable from "./../../assets/roundtable.png";
 import slack from "./../../assets/slack.png";
 import loopy from "./../../assets/loopy.png";
 import latent from "./../../assets/latent.jpg";
+import tongue from "./../../assets/tongue.jpeg"
 import "./Projects.css";
 
 function MakeProject({ title, hook, tech, overlaytitle, desc, link, img, vid }: Details) {
@@ -48,6 +49,15 @@ interface Details {
   
 export function Projects() {
     const data: Details[] = [
+      {
+        title: "Tongue Tied Tale",
+        hook: "GMTK Ranked top 25% amongst 32500 participants in the largest game jam in Itch.io history (2024)",
+        tech: "Unity | C#",
+        overlaytitle: "Tongue Tied Tale",
+        desc: `Tongue Tied Tale is a 2D Metroidvania featuring a chameleon who loves to eat! Play as a hungry reptile that'll consume everything in its path—even its enemies... Ranked top 25% in 32500-participant Game Maker's Toolkit 2024 game development competition.`,
+        link: `https://github.com/Watercooled-Grapes/GMTK-2024`,
+        img: tongue
+      },
       {
         title: "Loopy",
         hook: "Navigate the city like a local!",
@@ -130,7 +140,7 @@ export function Projects() {
       },
       {
         title: "Collidy Road",
-        hook: `GMTK Ranked top 30% amongst 23 000 participants in the largest game jam in Itch.io history (2023)`,
+        hook: `GMTK Ranked top 30% amongst 23000 participants in the largest game jam in Itch.io history (2023)`,
         tech: "Unity | C#",
         overlaytitle: "ROLES REVERSED",
         desc: `Become the ultimate antagonist against the Crossy Road inspired chicken and play as the CARS! 

@@ -129,17 +129,7 @@ section {
   .threecanvas {
     height: 40vh;
   }
-  #landing {
-    padding-top: 8vh;
-    padding-bottom: 10vh;
-    padding-left: 5vw;
-    padding-right: 5vw;
-      a {
-      #contact {
-        font-size: 1.1rem;
-      }
-    }
-  }
+
   .sidetray {
     transform: translateX(500rem);
   }
