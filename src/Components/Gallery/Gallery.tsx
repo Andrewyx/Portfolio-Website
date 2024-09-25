@@ -1,12 +1,18 @@
-import { fetchImageUrls } from 'google-photos-album-image-url-fetch';
+// import { fetchImageUrls } from 'google-photos-album-image-url-fetch';
+// import axios from 'axios';
+import { request } from 'gaxios';
 
 export default function Gallery() {
     getPhotos().catch(er => console.error(er));
-    return(<><div>PlaceHolderText</div></>)
+    return(<></>)
 }
 
 async function getPhotos() {
-  const re = await fetchImageUrls('https://photos.app.goo.gl/bRJhdGMSPZuAAHMXA');
-  
-  console.log(JSON.stringify(re, null, 2));
+  // const re = await fetchImageUrls('https://cors-anywhere.herokuapp.com/');
+  let response = await request<string>({
+    url: 'https://photos.app.goo.gl/bRJhdGMSPZuAAHMXA',
+    method: 'GET',
+    headers: {"Access-Control-Allow-Origin": "*"},
+  })
+  console.log(JSON.stringify(response, null, 2));
 };
