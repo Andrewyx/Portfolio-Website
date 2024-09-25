@@ -90,7 +90,7 @@ function App() {
         </section>
 
         <section id='photowrapper'>
-          <Gallery />
+          {/* <Gallery /> */}
         </section>
 
       </section>
