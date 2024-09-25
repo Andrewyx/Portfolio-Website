@@ -28,6 +28,7 @@
     "react-dom": "^18.2.0",
     "react-github-calendar": "^4.1.6",
     "react-intersection-observer": "^9.5.3",
+    "react-photo-gallery": "^8.0.0",
     "three": "^0.160.0"
   },
   "devDependencies": {

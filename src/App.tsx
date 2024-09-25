@@ -8,7 +8,7 @@ import { SkillList } from './Components/Misc/SkillBox';
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import Experience from './Components/Experience/Experience';
 import GitHub from './Components/GitHub/GitHub';
-import Gallery from './Components/Gallery/Gallery';
+// import GalleryGrid from './Components/Gallery/GalleryGrid';
 
 function App() {
   return (
@@ -89,9 +89,9 @@ function App() {
           </div>
         </section>
 
-        <section id='photowrapper'>
-          {/* <Gallery /> */}
-        </section>
+        {/* <section id='photowrapper'>
+          <GalleryGrid />
+        </section> */}
 
       </section>
       <div className='footerwrapper'>
