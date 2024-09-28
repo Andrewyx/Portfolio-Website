@@ -1,6 +1,6 @@
 import './App.css';
 import selfie from './assets/selfie.jpg';
-import resume from "./assets/ResumeCoopShort.pdf"
+import resume from "./assets/AndrewCoopResume.pdf"
 import { Projects } from './Components/Projects/Projects';
 import { Links } from './Components/Links/Links';
 import { WalleScene } from './Components/Misc/Model';
@@ -89,7 +89,8 @@ function App() {
           </div>
         </section>
 
-        {/* <section id='photowrapper'>
+        {/* TODO: Photo Gallery WIP 
+        <section id='photowrapper'>
           <GalleryGrid />
         </section> */}
 

@@ -9,6 +9,7 @@ import slack from "./../../assets/slack.png";
 import loopy from "./../../assets/loopy.png";
 import latent from "./../../assets/latent.jpg";
 import tongue from "./../../assets/tongue.jpeg"
+import octo from "./../../assets/octo.png";
 import "./Projects.css";
 
 function MakeProject({ title, hook, tech, overlaytitle, desc, link, img, vid }: Details) {
@@ -49,6 +50,15 @@ interface Details {
   
 export function Projects() {
     const data: Details[] = [
+      {
+        title: "Octochat",
+        hook: "Live Retrieval-Augmented Generatation (RAG) browser extension for GitHub repositories. Hack The North 2024",
+        tech: "Flask | WXT React | Voiceflow API",
+        overlaytitle: "Octochat",
+        desc: `Octochat is a Retrieval-Augmented Generatation (RAG) application which helps developers understand a new code file by allowing them to ask questions about how code snippets or functions work, search for where something has been implemented, how to debug an error, help generate better documentation if needed, and overall, more quickly understand the layers of code.`,
+        link: `https://github.com/Andrewyx/Octochat-HTN2024`,
+        img: octo
+      },
       {
         title: "Tongue Tied Tale",
         hook: "GMTK Ranked top 25% amongst 32500 participants in the largest game jam in Itch.io history (2024)",
