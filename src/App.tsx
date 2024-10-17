@@ -44,12 +44,12 @@ function App() {
           <h2>About Me</h2>
           <div>
             <p> Using code to build solutions is my goal as a programmer.
-              As a lover of both software and hardware, many of my projetcs involve mixing these two aspects of design. 
-              From making my own CAD models, to making my own circuit boards and programming them, I enjoy all parts of the design process. 
+              As a lover of both software and hardware, many of my projects involve mixing these two aspects of design. 
+              From making my own CAD models to making my own circuit boards and programming them, I enjoy all parts of the design process. 
               Even the WallE rendered above was designed by me in CAD from an old project and ported into a mesh with three.js!
-              Currently, I'm a software technical member of the University of British Columbia's "ThunderBots" competetive soccer robotics team. 
-              Lastly, I absolutely adore game design, so if you ever have an idea you would like to share or
-              would like to compete in a Game Jam with me, I would love to connect with you! 
+              Currently, I'm a software technical member of the University of British Columbia's "ThunderBots" competitive soccer robotics team. 
+              Lastly, I adore game design, so if you ever have an idea you would like to share or
+              would like to compete in a Game Jam with me, I would love to connect with you!
             </p>
             <img src={selfie} alt='Andrew'></img>
           </div>
