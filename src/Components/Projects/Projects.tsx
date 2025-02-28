@@ -10,6 +10,7 @@ import loopy from "./../../assets/loopy.png";
 import latent from "./../../assets/latent.jpg";
 import tongue from "./../../assets/tongue.jpeg"
 import octo from "./../../assets/octo.png";
+import walle from "./../../assets/WallEAssemblyIso.jpg"
 import "./Projects.css";
 
 function MakeProject({ title, hook, tech, overlaytitle, desc, link, img, vid }: Details) {
@@ -50,6 +51,15 @@ interface Details {
   
 export function Projects() {
     const data: Details[] = [
+      {
+        title: "Handshake",
+        hook: "Stay close with those you have fun with!",
+        tech: "C++ | Firebase | PlatformIO",
+        overlaytitle: "Handshake",
+        desc: `Keep in touch with those too far away for a simple handshake! Handshake is a robot + application pair that allows you and your friends to remotely control a handshake robot together. Via a web interface https://handshake-664b7.firebaseapp.com/, interact with friends beyond just a screen or video call!`,
+        link: `https://github.com/Andrewyx/Handshake`,
+        img: walle
+      },
       {
         title: "Octochat",
         hook: "Live Retrieval-Augmented Generatation (RAG) browser extension for GitHub repositories. Hack The North 2024",

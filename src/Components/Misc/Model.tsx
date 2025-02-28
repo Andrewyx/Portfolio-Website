@@ -17,6 +17,9 @@ function Light({ position = [1, 1, 1], rotation = [0, 0, 0], color = 0xFFFFFF, i
 }
 
 function Walle() {
+  const HIGH_INTENSITY = 25;
+  const MED_INTENSITY = 15;
+  const LOW_INTENSITY = 10;
   const roboref = useRef<Mesh>(null!);
   useFrame((_, delta) => {
     if (roboref.current) {
@@ -26,14 +29,14 @@ function Walle() {
   return (
     <>
       <Suspense fallback={null}>
-        <Light position={[4, 3, 4]} rotation={[PI, 0, PI]} intensity={40} />
-        <Light position={[-4, 3, 4]} rotation={[-PI, 0, -PI]} intensity={40} />
-        <Light position={[4, 3, -4]} rotation={[PI, PI, PI]} intensity={20} />
-        <Light position={[-4, 3, -4]} rotation={[-PI, PI, -PI]} intensity={20} />
-        <Light position={[0, -4, 0]} rotation={[-PI, -PI, -PI]} intensity={10} />
+        <Light position={[4, 3, 4]} rotation={[PI, 0, PI]} intensity={HIGH_INTENSITY} />
+        <Light position={[-4, 3, 4]} rotation={[-PI, 0, -PI]} intensity={HIGH_INTENSITY} />
+        <Light position={[4, 3, -4]} rotation={[PI, PI, PI]} intensity={MED_INTENSITY} />
+        <Light position={[-4, 3, -4]} rotation={[-PI, PI, -PI]} intensity={MED_INTENSITY} />
+        <Light position={[0, -4, 0]} rotation={[-PI, -PI, -PI]} intensity={LOW_INTENSITY} />
 
         <mesh ref={roboref}>
-          <Model scale={25} position={[-0.5, 0, 0]} />
+          <Model scale={22} position={[0.2, 0, 0]} />
         </mesh>
 
       </Suspense>
