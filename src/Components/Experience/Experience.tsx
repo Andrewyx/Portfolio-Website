@@ -5,12 +5,12 @@ import hms from '../../assets/hms.png';
 
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { useState } from 'react';
 
 interface ExperienceDetails {
   title: string;
   date: string;
   position: string;
+  skills: string[];
   desc: string;
   link?: string;
   img?: string;
@@ -24,6 +24,7 @@ export default function Experience() {
       title: "UBC Thunderbots",
       date: "Sept. 2023 - Current",
       position: "Software Developer",
+      skills: ["C++", "Python", "Robot AI"],
       desc: `Coordinates and collaborates with various sub-teams and team members to design autonomous soccer robots for RoboCup competitions. 
         As part of the Software Technical Team, Implements software in charge of determining robot AI and behaviour in C++ and Python.`,
       link: `https://www.ubcthunderbots.ca/`,
@@ -33,6 +34,7 @@ export default function Experience() {
       title: "UBC DMCBH",
       date: "Jun. 2023 - Jul. 2023",
       position: "Neurology Laboratory Assistant",
+      skills: ["Python", "MATLAB", "Data Analysis"],
       desc: `A member of Djavad Mowafaghian Centre for Brain Health (DMCBH) in Cashman Labs, assisting experiments 
               and research relating to neurodegenerative diseases such as ALS and protein misfolding.`,
       img: dmcbh
@@ -41,6 +43,7 @@ export default function Experience() {
       title: "HMS Engineering Club",
       date: "Jun. 2020 - Jun. 2023",
       position: "Hugh McRoberts Secondary Engineering Club President",
+      skills: ["Leadership", "Event Planning", "Outreach"],
       desc: `President of the largest STEM-related club at HMS. Directed club operations and leadership across three years resulting in club growth from 40 to 100 members. 
               Co-founded district-wide STEM initiative consisting of over 120 members in collaboration with the University of Victoria, Kwantlen Polytechnic University, 
               and Simon Fraser University to promote education accessibility.`,
@@ -55,6 +58,7 @@ export default function Experience() {
       title={d.title}
       date={d.date}
       position={d.position}
+      skills={d.skills}
       desc={d.desc} link={d.link}
       img={d.img}
       vid={d.vid} />);
@@ -65,8 +69,16 @@ export default function Experience() {
   )
 }
 
-function MakeExperience({ title, date, position, desc, link, img, vid }: ExperienceDetails) {
-  const [hidden, setHidden] = useState(true);
+function MakeSkills({ skills }: { skills: string[] }) {
+  const listItems = skills.map((txt) =>
+    <span key={txt} className='experience-skills-boxes'>{txt}</span>
+  );
+  return (
+    <div id='experience-skills'>{listItems}</div>
+  )
+}
+
+function MakeExperience({ title, date, position, skills, desc, link, img, vid }: ExperienceDetails) {
 
   let media;
   if (vid) {
@@ -79,27 +91,22 @@ function MakeExperience({ title, date, position, desc, link, img, vid }: Experie
     <VerticalTimelineElement
       className="vertical-timeline-element"
       contentStyle={{ boxShadow: '0 0px 0 #ffffff00' }}
-      // contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
       date={date}
-      // iconStyle={{ background: 'var(--orchid)', color: '#fff' }}
       textClassName="text-class"
     >
-      <div
-        // onMouseEnter={() => setHidden(false)}
-        // onMouseLeave={() => setHidden(true)}
-        >
-      <h3 className="title">{title}</h3>
-      <h4 className="subtitle">{position}</h4>
-      {false ? null : <div className='experienceImage'>{media}</div>}
-      <p>{desc}</p>
-      {link ?
-        <div className='contactbutton'>
-          <a href={link}><button>See More</button></a>
-        </div> : <></>}
+      <div id='experience'>
+        <h3 className="title">{title}</h3>
+        <h4 className="subtitle">{position}</h4>
+        <MakeSkills skills={skills} />
+        {false ? null : <div className='experienceImage'>{media}</div>}
+        
+        <p>{desc}</p>
+        {link ?
+          <div className='contactbutton'>
+            <a href={link}><button>See More</button></a>
+          </div> : <></>}
       </div>
 
     </VerticalTimelineElement>
-    // </div>
-
   )
 }
