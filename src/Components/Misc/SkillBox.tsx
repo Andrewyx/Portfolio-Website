@@ -1,19 +1,41 @@
 import "../../App.css";
 
-export function SkillList() {
-    interface Skill {
-      name: string;
-    }
-    function MakeSkill({ name }: Skill) {
-      return (<div><span key={name} className='skillBoxes'>{name}</span></div>)
-    }
-    const skills = ["HTML", "CSS", "TypeScript", "JavaScript", "ReactJS", "Java",
-     "Python", "C++", "C#", "Racket", "Three.js", "Firebase", "Unity", "Platform.io", "Git",
-     "Inventor", "Fusion 360", "TinkerCAD", "Ultimaker Cura", "Fritzing"];
-    const listItems = skills.map((txt) =>
-      <MakeSkill name={txt.toString()} key={txt.toString()} />
-    );
-    return (
-      <div id='skill'>{listItems}</div>
-    )
+function SkillList({ skills }: { skills: string[] }) {
+  interface Skill {
+    name: string;
   }
+  function MakeSkill({ name }: Skill) {
+    return (<div><span key={name} className='skillBoxes'>{name}</span></div>)
+  }
+  const listItems = skills.map((txt) =>
+    <MakeSkill name={txt.toString()} key={txt.toString()} />
+  );
+  return (
+    <div id='skill'>{listItems}</div>
+  )
+}
+
+export function LanguageList() {
+    const languages = [
+    "C++",
+    "Python",
+    "C#",
+    "Java",
+    "JavaScript",
+    "TypeScript",
+  ]
+  return(
+    <SkillList skills={languages} />
+  )
+}
+export function FrameworkList() {
+  const frameworks = [
+    "ReactJS",
+    "Unity",
+    "Bazel",
+    "Chromium",
+  ]
+  return(
+    <SkillList skills={frameworks} />
+  )
+}
