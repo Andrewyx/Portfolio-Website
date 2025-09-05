@@ -63,19 +63,11 @@ section {
   justify-content: center;
 }
 
-
-@media screen and (max-width: 900px) {
-  #accordian {
-    max-width:fit-content;
-  }
-}
-
 @media screen and (max-width: 650px) {
   body, html{
     margin:0;
     padding:0;
     width: 100%;
-    /* min-width: 350px; */
     overflow-x: hidden;
 }
   #title {
@@ -97,14 +89,6 @@ section {
     .words {
       font-size: 1.5rem;
     }
-  }
-
-  .MuiAccordionSummary-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
   }
 }
 
