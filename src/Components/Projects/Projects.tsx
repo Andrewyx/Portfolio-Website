@@ -42,7 +42,7 @@ function MakeProject({ title, hook, tech, overlaytitle, desc, link, img, vid }: 
           <MakeSkills skills={tech} />
         </div>
         <div className='cardInfo'>
-          {/* <h3>{overlaytitle}</h3> */}
+          <h3>{overlaytitle}</h3>
           <p>{desc}</p>
         </div>
       </div>

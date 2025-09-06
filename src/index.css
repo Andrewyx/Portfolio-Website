@@ -16,6 +16,7 @@
 html {
   width: 100%;
 }
+
 body {
   padding: 0% 5%;
   display: flex;
@@ -64,53 +65,79 @@ section {
 }
 
 @media screen and (max-width: 650px) {
-  body, html{
-    margin:0;
-    padding:0;
+
+  body,
+  html {
+    margin: 0;
+    padding: 0;
     width: 100%;
     overflow-x: hidden;
-}
+  }
+
   #title {
-    
+
     h1 {
       margin-bottom: 0rem;
       line-height: normal;
       font-size: 5rem;
+
       #name {
         margin-left: 0.5rem;
         margin-bottom: 1rem;
       }
     }
   }
+
   #snippet {
     p {
-    font-size: 1.5rem;
+      font-size: 1.5rem;
     }
+
     .words {
       font-size: 1.5rem;
     }
   }
+
+  .standardreact {
+    .project {
+      width: 23rem;
+      height: 12rem;
+    }
+  }
+
+  #about #skillcontainer {
+    flex-direction: column;
+  }
+
+  .vertical-timeline {
+    width: 90vw;
+  }
 }
 
-@media screen and ((max-width: 400px) or (max-height: 700px)){
+@media screen and ((max-width: 400px) or (max-height: 700px)) {
   #title {
     h1 {
       padding-top: 1rem;
       font-size: 3rem;
+
       #name {
         margin-left: 0.5rem;
       }
     }
   }
+
   #snippet {
     padding-left: 2rem;
+
     p {
-    font-size: 1.2rem;
+      font-size: 1.2rem;
     }
+
     .words {
       font-size: 1.2rem;
     }
   }
+
   .threecanvas {
     height: 40vh;
   }
@@ -122,34 +149,37 @@ section {
   .horizontallink {
     width: 18rem;
   }
-  
+
   .horizontallink .icon {
     padding: 0rem;
-    height: 1.7rem;   
+    height: 1.7rem;
   }
+
   .standardreact {
     font-size: 0.9rem;
+
     h3 {
       font-size: 1.3rem;
     }
+
     .project {
-      height: 28rem;
-      width: 19rem;
-    }
-    .project .cardDesc {
-    height: 9rem;
+      height: 10rem;
+      width: 20rem;
     }
   }
+
   #footer {
     padding: 0rem;
     padding-top: 1rem;
+
     h2 {
       padding: 0rem;
       font-size: 1.5rem;
     }
+
     span {
       font-size: 0.9rem;
-      padding-top:0rem;
+      padding-top: 0rem;
     }
   }
 }
