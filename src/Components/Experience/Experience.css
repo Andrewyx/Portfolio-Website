@@ -67,6 +67,7 @@
 
 .vertical-timeline-element .text-class {
     background-color: var(--darkgrey);
+    border-radius: 1rem;
 }
 
 .text-class.vertical-timeline-element-content.bounce-in {
@@ -119,4 +120,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+}
+
+.vertical-timeline-element-date {
+    text-align: left;
 }

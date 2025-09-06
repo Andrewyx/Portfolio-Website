@@ -24,7 +24,7 @@ export default function Experience() {
       title: "UBC Thunderbots",
       date: "Sept. 2023 - Current",
       position: "Software Developer",
-      skills: ["C++", "Python", "Robot AI"],
+      skills: ["C++", "Python", "Robotics"],
       desc: `Coordinates and collaborates with various sub-teams and team members to design autonomous soccer robots for RoboCup competitions. 
         As part of the Software Technical Team, Implements software in charge of determining robot AI and behaviour in C++ and Python.`,
       link: `https://www.ubcthunderbots.ca/`,
@@ -34,7 +34,7 @@ export default function Experience() {
       title: "UBC DMCBH",
       date: "Jun. 2023 - Jul. 2023",
       position: "Neurology Laboratory Assistant",
-      skills: ["Python", "MATLAB", "Data Analysis"],
+      skills: ["Data Analysis"],
       desc: `A member of Djavad Mowafaghian Centre for Brain Health (DMCBH) in Cashman Labs, assisting experiments 
               and research relating to neurodegenerative diseases such as ALS and protein misfolding.`,
       img: dmcbh
