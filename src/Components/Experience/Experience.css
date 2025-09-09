@@ -7,7 +7,7 @@
 }
 
 #experience .experienceImage {
-    margin-top: 1.5rem;
+    margin-top: 0rem;
     padding: 0rem;
     display: flex;
     justify-content: center;
@@ -28,7 +28,7 @@
 
 #experience p {
     text-align: left;
-    margin-top: 0rem;
+    margin-top: 1rem;
 }
 
 #experience .title {
@@ -53,21 +53,20 @@
 
 #experience:hover {
     background-color: var(--darkgrey);
-
+    border-radius: 1rem;
     .experienceImage {
+        margin-top: 0.5rem;
         visibility: visible;
         opacity: 1;
         max-height: 200rem;
-    }
-
-    p {
-        margin-top: 1rem;
     }
 }
 
 .vertical-timeline-element .text-class {
     background-color: var(--darkgrey);
     border-radius: 1rem;
+        border: 1px solid var(--lightgrey);
+
 }
 
 .text-class.vertical-timeline-element-content.bounce-in {
@@ -93,7 +92,7 @@
     max-height: 15rem;
     overflow: hidden;
     border-radius: 0.2rem;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0.5rem 1rem  rgba(0, 0, 0, 0.8);
 }
 
 .experienceImage video {
@@ -102,7 +101,7 @@
     max-height: 100%;
     overflow: hidden;
     border-radius: 0.2rem;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0.5rem 1rem  rgba(0, 0, 0, 0.8);
 }
 
 .experience-skills-boxes {

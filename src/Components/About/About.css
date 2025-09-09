@@ -1,0 +1,111 @@
+#about {
+    padding: 5rem;
+    height: fit-content;
+    font-family: inherit;
+    padding-bottom: 0rem;
+    div {
+        display: flex;
+        flex-direction: column;
+        align-content: top;
+        font-size: larger;
+        padding: 1.5rem;
+        align-items: center;
+
+        p {
+            margin-bottom: 2rem;
+        }
+
+        img {
+            margin: 1rem;
+            width: 15rem;
+            height: 15rem;
+            border-radius: 10000rem;
+            border: 1px solid white;
+        }
+
+        #resume-link {
+            margin-bottom: 6rem;
+        }
+
+        button {
+            border: 1px solid rgba(255, 255, 255, 0.87);
+        }
+
+    }
+}
+
+#about-wrapper {
+    margin-bottom: 0rem;
+}
+
+#about #skill-container {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+#about #skill-container #skill {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5rem;
+    padding-top: 0.8rem;
+
+    div {
+        margin: 0.1rem;
+        padding: 0.2rem;
+    }
+
+    .skillBoxes {
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 1.3rem;
+        border-radius: 0.5rem;
+        background-color: var(--darkgrey);
+        line-height: 0rem;
+        padding: 1rem;
+        margin: 0.1rem;
+    }
+}
+
+#skill-container .skill-list {
+    background-image: linear-gradient(to right,
+            var(--orchid),
+            var(--offwhite),
+            var(--yellow),
+            var(--orchid),
+            var(--brown),
+            var(--orchid));
+    border-radius: 2rem;
+    animation: background-pan 4s infinite;
+    background-size: 200%;
+    transition: all 0.2s ease-in-out;
+    padding: 0.3rem;
+    margin: 3rem;
+    flex-direction: row;
+    flex-basis: 0rem;
+    flex-grow: 1;
+    align-items: stretch;
+
+    div {
+        width: 100%;
+
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.1rem;
+        }
+
+        background-image: none;
+        background-color: #181818;
+        border-radius: 2rem;
+
+        div {
+            width: auto;
+            flex-direction: row;
+        }
+    }
+}

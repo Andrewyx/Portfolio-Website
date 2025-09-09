@@ -11,6 +11,9 @@ import latent from "./../../assets/latent.jpg";
 import tongue from "./../../assets/tongue.jpeg"
 import octo from "./../../assets/octo.png";
 import walle from "./../../assets/WallEAssemblyIso.jpg"
+import exec from "./../../assets/exec.png"
+import pikspace from "./../../assets/pikspace.png"
+
 import "./Projects.css";
 
 function MakeSkills({ skills }: { skills: string[] }) {
@@ -23,7 +26,7 @@ function MakeSkills({ skills }: { skills: string[] }) {
 }
 
 
-function MakeProject({ title, hook, tech, overlaytitle, desc, link, img, vid }: Details) {
+function MakeProject({ title, hook, tech, overlaytitle, desc, link, img, vid, starred }: Details) {
   let media;
   if (vid) {
     media = <video autoPlay loop muted src={vid}></video>
@@ -33,7 +36,7 @@ function MakeProject({ title, hook, tech, overlaytitle, desc, link, img, vid }: 
   }
   return (
     <a href={link}>
-      <div className='project'>
+      <div className={'project' + (starred ? ' starred' : '')}>
         {media}
         <div className='cardDesc'>
           <h3>{title}</h3>
@@ -59,10 +62,21 @@ interface Details {
   link: string;
   img?: string;
   vid?: string;
+  starred?: boolean;
 }
 
 export function Projects() {
   const data: Details[] = [
+    {
+      title: "Execution Order",
+      hook: "GMTK Ranked top 400 amongst 37k participants in the largest game jam in Itch.io history (2025) for theme 'Loop'",
+      tech: ["Unity", "C#"],
+      overlaytitle: "Game Maker's Toolkit 2025",
+      desc: `You are at the whims of the machine, alone, but perhaps...YOU can help YOURSELF. Fully in-house developed puzzle game (including art!) where you control multiple versions of yourself in a time loop to solve puzzles and escape an infinite cycle.`,
+      link: `https://andrewyx.itch.io/execution-order`,
+      img: exec,
+      starred: true
+    },
     {
       title: "Handshake",
       hook: "Stay close with those you have fun with and keep in touch with those too far away for a simple handshake!",
@@ -70,7 +84,17 @@ export function Projects() {
       overlaytitle: "Handshake",
       desc: `Handshake is a robot + application pair that allows you and your friends to remotely control a handshake robot together. Via a web interface https://handshake-664b7.firebaseapp.com/, interact with friends beyond just a screen or video call!`,
       link: `https://github.com/Andrewyx/Handshake`,
-      img: walle
+      img: walle,
+      starred: true
+    },
+    {
+      title: "Pikspace",
+      hook: "A DSLR simulation in VR for the Meta Quest 3. Built with Unity game engine using HD Render Pipeline.",
+      tech: ["Unity", "C#"],
+      overlaytitle: "nwHacks 2025",
+      desc: `Pikspace aims to be a realistic camera simulator above all else. When you strap on your vr headset, you'll be transported into a photorealistic vista armed with a life-like DSLR. Physical properties of DSLRs are simulated including aperture, shutter speed, ISO, and focal length. Use this digital world to learn how cameras work!`,
+      link: `https://github.com/TightGrapes/Pikspace`,
+      img: pikspace,
     },
     {
       title: "Octochat",
@@ -92,7 +116,7 @@ export function Projects() {
     },
     {
       title: "Loopy",
-      hook: "Navigate the city like a local!",
+      hook: "Navigate the city like a local! Community-driven transit ratings and trip planning web app",
       tech: ["React", "Firebase", "Places API"],
       overlaytitle: "Loopy",
       desc: `Loopy is a community-driven ratings aggregation and trip planning site that takes origin and destination inputs and displays ratings for each bus/skytrain. 
@@ -102,7 +126,7 @@ export function Projects() {
     },
     {
       title: "LaTent",
-      hook: "A Mathematician's Guide to the Universe",
+      hook: "A Mathematician's Guide to the Universe. LaTeX notebook and command reference app",
       tech: ["Java", "Swing", "JUnit"],
       overlaytitle: "LaTent",
       desc: `LaTent is a remedy the challenges of memorizing and familiarizing the nature of LaTex commands and is not only geered towards students but all new users to LaTex.`,
@@ -211,7 +235,8 @@ export function Projects() {
       overlaytitle={d.overlaytitle}
       desc={d.desc} link={d.link}
       img={d.img}
-      vid={d.vid} />
+      vid={d.vid}
+      starred={d.starred} />
   </div>);
   return (
     <>{listofDetails}</>

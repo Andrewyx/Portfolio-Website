@@ -1,7 +1,20 @@
+#projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center
+}
+
+#project-wrapper {
+  margin: 1rem;
+  padding: 0rem;
+
+}
+
 .project {
   position: relative;
   background-color: rgba(255, 255, 255, 0.048);
-  border: 1px solid rgba(255, 255, 255, 0.03);
+  border: 2px solid rgba(255, 255, 255, 0.03);
   border-radius: 1rem;
   margin: 1rem;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
@@ -22,7 +35,7 @@
   transform: translateY(1rem) scale(1.5);
   position: relative;
   z-index: 1;
-  transition: 0.2s all ease-in-out;
+  transition: 0.1s all ease-in-out;
 }
 
 .project:before {
@@ -140,4 +153,10 @@
 a {
   color: inherit;
   text-decoration: inherit;
+}
+
+.project.starred {
+  border: 3px solid var(--offwhite);
+  box-shadow: 0rem 0rem 2.5rem 0.2rem var(--offwhite);
+
 }

@@ -1,7 +1,6 @@
 import './Experience.css'
 import tbots from '../../assets/tbots.jpg';
 import dmcbh from '../../assets/dmcbh.jpg';
-import hms from '../../assets/hms.png';
 
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
@@ -21,6 +20,14 @@ export default function Experience() {
 
   const data: ExperienceDetails[] = [
     {
+      title: "Redbrick (Shift)",
+      date: "Jan. 2025 - Aug. 2025",
+      position: "Software Engineering Intern",
+      skills: ["C++", "Chromium", "Browser Development"],
+      desc: `Developer for the Shift browser (~2M MAUs) on the Chromium team.`,
+      // img: tbots
+    },
+    {
       title: "UBC Thunderbots",
       date: "Sept. 2023 - Current",
       position: "Software Developer",
@@ -38,17 +45,6 @@ export default function Experience() {
       desc: `A member of Djavad Mowafaghian Centre for Brain Health (DMCBH) in Cashman Labs, assisting experiments 
               and research relating to neurodegenerative diseases such as ALS and protein misfolding.`,
       img: dmcbh
-    },
-    {
-      title: "HMS Engineering Club",
-      date: "Jun. 2020 - Jun. 2023",
-      position: "Hugh McRoberts Secondary Engineering Club President",
-      skills: ["Leadership", "Event Planning", "Outreach"],
-      desc: `President of the largest STEM-related club at HMS. Directed club operations and leadership across three years resulting in club growth from 40 to 100 members. 
-              Co-founded district-wide STEM initiative consisting of over 120 members in collaboration with the University of Victoria, Kwantlen Polytechnic University, 
-              and Simon Fraser University to promote education accessibility.`,
-      link: `https://hmsengineeringclub.weebly.com/`,
-      img: hms
     }
   ]
 
@@ -80,11 +76,11 @@ function MakeSkills({ skills }: { skills: string[] }) {
 
 function MakeExperience({ title, date, position, skills, desc, link, img, vid }: ExperienceDetails) {
 
-  let media;
+  let media = null;
   if (vid) {
     media = <video autoPlay loop muted src={vid}></video>
   }
-  else {
+  else if (img) {
     media = <img src={img} alt={title}></img>
   }
   return (
@@ -98,7 +94,7 @@ function MakeExperience({ title, date, position, skills, desc, link, img, vid }:
         <h3 className="title">{title}</h3>
         <h4 className="subtitle">{position}</h4>
         <MakeSkills skills={skills} />
-        {false ? null : <div className='experienceImage'>{media}</div>}
+        {media === null ? null : <div className='experienceImage'>{media}</div>}
         
         <p>{desc}</p>
         {link ?

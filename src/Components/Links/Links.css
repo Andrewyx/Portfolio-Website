@@ -41,6 +41,6 @@
   }
   
   .horizontallink .icon:hover {
-    color: #2d93ad;
+    color: var(--orchid);
     transform: translateY(-10px);
   }

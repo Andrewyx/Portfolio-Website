@@ -1,0 +1,46 @@
+.opensource {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-basis: 0rem;
+    flex-grow: 1rem;
+    flex-shrink: 0rem;
+    align-items: stretch;
+
+}
+
+.opensource-project {
+    margin: 1rem;
+    padding: 0.5rem 4rem;
+    border-radius: 1rem;
+    border: 1px solid var(--lightgrey);
+    transition: all 0.1s ease-in-out;
+
+    h3 {
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        margin-top: 0rem;
+    }
+
+}
+
+.opensource-project:hover {
+    background-color: var(--lightgrey);
+}
+
+
+
+#opensource-wrapper {
+    margin: 3rem;
+    margin-bottom: 8rem;
+}
+
+#opensource-wrapper {
+    .sectiontitle {
+        margin: 0rem;
+        padding: 1rem;
+    }
+}

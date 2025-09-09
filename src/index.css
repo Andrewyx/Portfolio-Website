@@ -98,14 +98,7 @@ section {
     }
   }
 
-  .standardreact {
-    .project {
-      width: 23rem;
-      height: 12rem;
-    }
-  }
-
-  #about #skillcontainer {
+  #about #skill-container {
     flex-direction: column;
   }
 
@@ -155,7 +148,7 @@ section {
     height: 1.7rem;
   }
 
-  .standardreact {
+  .standard-react {
     font-size: 0.9rem;
 
     h3 {
