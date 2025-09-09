@@ -12,8 +12,8 @@ export function About() {
             <div>
                 <p> I love making things!
                     As an avid software-hardware fanatic, many of my projects involve mixing these two aspects of design. Even the WallE rendered above was designed by me in CAD from an old project and ported into a mesh with three.js!
-                    Open source is a passion of mine, and I love contributing to the community.
-                    Software wise, I enjoy working with a variety of languages and frameworks to bring my ideas to life. OH and I adore game design, so if you ever have an idea you would like to share or
+                    Recently, open source has become a passion of mine, and I love contributing to the community. Software wise, I enjoy working with a variety of languages and frameworks to bring my ideas to life. 
+                    I've explored and loved topics from as low level as optimizing Protocol Buffers for microcontrollers, to high level projects involving XR development! OH and I adore game design, so if you ever have an idea you would like to share or
                     would like to compete in a Game Jam with me, I would love to connect with you!
                 </p>
                 <a id="resume-link" href={resume}>

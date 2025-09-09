@@ -1,6 +1,6 @@
 .opensource {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
     flex-basis: 0rem;

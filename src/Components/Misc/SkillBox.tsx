@@ -21,6 +21,7 @@ export function LanguageList() {
     "Python",
     "C#",
     "Java",
+    "Starlark",
     "JavaScript",
     "TypeScript",
   ]
@@ -30,10 +31,12 @@ export function LanguageList() {
 }
 export function FrameworkList() {
   const frameworks = [
-    "ReactJS",
-    "Unity",
     "Bazel",
     "Chromium",
+    "Unity",
+    "ReactJS",
+    "pybind11",
+    "Protocol Buffers/nanopb",
   ]
   return(
     <SkillList skills={frameworks} />

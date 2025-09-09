@@ -24,8 +24,7 @@ export default function Experience() {
       date: "Jan. 2025 - Aug. 2025",
       position: "Software Engineering Intern",
       skills: ["C++", "Chromium", "Browser Development"],
-      desc: `Developer for the Shift browser (~2M MAUs) on the Chromium team.`,
-      // img: tbots
+      desc: `Developer for the Shift browser on the Chromium team (>32M lines of code!). Engineered in-app subscription services, user data synchronization, authentication, and established novel dev-ops tooling, such as performance profiling, and V8/Blink compiler feature set extensions.`,
     },
     {
       title: "UBC Thunderbots",
