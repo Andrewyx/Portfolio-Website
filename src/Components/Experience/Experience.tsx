@@ -98,7 +98,7 @@ function MakeExperience({ title, date, position, skills, desc, link, img, vid }:
         <p>{desc}</p>
         {link ?
           <div className='contactbutton'>
-            <a href={link}><button>See More</button></a>
+            <a href={link} target="_blank" rel="noopener noreferrer"><button>See More</button></a>
           </div> : <></>}
       </div>
 

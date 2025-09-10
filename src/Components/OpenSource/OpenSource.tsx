@@ -16,7 +16,7 @@ const data: Details[] = [
 
 function MakeOpenSource({ title, desc, link }: Details) {
     return (
-        <a href={link}>
+        <a href={link} target="_blank" rel="noopener noreferrer">
             <div className='opensource-project'>
                 <h3>{title}</h3>
                 <p>{desc}</p>

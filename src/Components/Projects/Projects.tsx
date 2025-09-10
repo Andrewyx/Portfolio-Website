@@ -35,7 +35,7 @@ function MakeProject({ title, hook, tech, overlaytitle, desc, link, img, vid, st
     media = <img src={img} alt={title}></img>
   }
   return (
-    <a href={link}>
+    <a href={link} target="_blank" rel="noopener noreferrer">
       <div className={'project' + (starred ? ' starred' : '')}>
         {media}
         <div className='cardDesc'>

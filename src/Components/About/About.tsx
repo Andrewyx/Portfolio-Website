@@ -16,7 +16,7 @@ export function About() {
                     I've explored and loved topics from as low level as optimizing Protocol Buffers for microcontrollers, to high level projects involving XR development! OH and I adore game design, so if you ever have an idea you would like to share or
                     would like to compete in a Game Jam with me, I would love to connect with you!
                 </p>
-                <a id="resume-link" href={resume}>
+                <a id="resume-link" href={resume} target="_blank" rel="noopener noreferrer">
                     <button id="contact">
                         Resume
                     </button>
