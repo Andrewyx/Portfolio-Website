@@ -8,8 +8,13 @@ interface Details {
 
 const data: Details[] = [
     {
+        title: "PyScreenReader",
+        desc: "Parse on-screen information using the simplicity of Python on any platform.",
+        link: "https://github.com/PyScreenReader/PyScreenReader"
+    },
+    {
         title: "PlatformIO Rules",
-        desc: " Bazel Starlark rules for building and uploading Arduino programs using the PlatformIO build system.",
+        desc: "Bazel Starlark rules for building and uploading Arduino programs using the PlatformIO build system.",
         link: "https://github.com/mum4k/platformio_rules"
     }
 ]
