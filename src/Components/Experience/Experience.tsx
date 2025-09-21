@@ -29,7 +29,7 @@ export default function Experience() {
     {
       title: "UBC Thunderbots",
       date: "Sept. 2023 - Current",
-      position: "Software Developer",
+      position: "Software Co-Lead",
       skills: ["C++", "Python", "Robotics"],
       desc: `Coordinates and collaborates with various sub-teams and team members to design autonomous soccer robots for RoboCup competitions. 
         As part of the Software Technical Team, Implements software in charge of determining robot AI and behaviour in C++ and Python.`,
