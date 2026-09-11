@@ -6,17 +6,19 @@ import { SpeedInsights } from "@vercel/speed-insights/react"
 import Experience from './Components/Experience/Experience';
 import { About } from './Components/About/About';
 import { OpenSource } from './Components/OpenSource/OpenSource';
+import { Nav } from './Components/Nav/Nav';
 
 function App() {
   return (
     <>
+      <Nav />
       <section id="landing">
         <div id="title">
           <h1>Hello, I'm </h1>
-          <div style={{ display: "inline" }}>
-            <h1 style={{ display: "inline" }} id="name">Andrew</h1>
-            <h1 style={{ display: "inline" }}>!</h1>
-          </ div>
+          <div className="inline-title-wrapper">
+            <h1 className="inline-title" id="name">Andrew</h1>
+            <h1 className="inline-title">!</h1>
+          </div>
         </div>
         <div id="snippet">
           <p>I am a </p>
@@ -30,7 +32,7 @@ function App() {
         </div>
         <WalleScene />
         <a href='mailto:andrewmaobc@gmail.com'>
-          <button id="contact">Contact Me</button>
+          <button className="contact-btn">Contact Me</button>
         </a>
       </section>
       <section className="standard-react">
@@ -70,9 +72,9 @@ function App() {
         <div id="footer">
           <h2>Come chat with me!</h2>
           <a href='mailto:andrewmaobc@gmail.com'>
-            <button id="contact">Contact Me</button>
+            <button className="contact-btn">Contact Me</button>
           </a>
-          <span>Website made by Andrew Mao 2025 <br />
+          <span>Website made by Andrew Mao 2026 <br />
             andrewmaobc@gmail.com</span>
         </div>
       </div>

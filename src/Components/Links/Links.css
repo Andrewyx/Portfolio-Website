@@ -19,7 +19,7 @@
   }
   
   .sidetray .icon:hover {
-    color: var(--purple);
+    color: var(--accent-tertiary);
     transform: translateX(10px);
   }
 
@@ -41,6 +41,6 @@
   }
   
   .horizontallink .icon:hover {
-    color: var(--orchid);
+    color: var(--accent-secondary);
     transform: translateY(-10px);
   }

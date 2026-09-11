@@ -13,15 +13,14 @@ export function About() {
                 <p> I love making things!
                     As an avid software-hardware fanatic, many of my projects involve mixing these two aspects of design. Even the WallE rendered above was designed by me in CAD from an old project and ported into a mesh with three.js!
                     Recently, open source has become a passion of mine, and I love contributing to the community. Software wise, I enjoy working with a variety of languages and frameworks to bring my ideas to life. 
-                    I've explored and loved topics from as low level as optimizing Protocol Buffers for microcontrollers, to high level projects involving XR development! OH and I adore game design, so if you ever have an idea you would like to share or
-                    would like to compete in a Game Jam with me, I would love to connect with you!
+                    I've explored a wide range of topics, from low-level optimizations for microcontrollers to high-level XR development. I also adore game design, so if you ever have an idea you'd like to share or want to team up for a Game Jam, I'd love to connect with you!
                 </p>
                 <a id="resume-link" href={resume} target="_blank" rel="noopener noreferrer">
-                    <button id="contact">
+                    <button className="contact-btn">
                         Resume
                     </button>
                 </a>
-                <img src={selfie} alt='Andrew'></img>
+                <img src={selfie} alt='Andrew' width={240} height={240} loading="lazy" decoding="async"></img>
             </div>
 
             <section id='github-wrapper'>

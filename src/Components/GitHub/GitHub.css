@@ -1,16 +1,23 @@
-@media  screen and (max-width: 950px) {
-    #github-wrapper {
-        width: 60vw;
-    }
-}
-
 #github-wrapper {
     margin-top: 6rem;
-    width: auto;
     width: 85vw;
+    max-width: 100%;
     margin-bottom: auto;
+
     text, div {
         font-size: large;
         padding: 0rem;
+    }
+}
+
+/* On smaller screens the fixed-width contributions calendar is wider than the
+   viewport. Switch off the section's flex-centering (which makes the left edge
+   unreachable) and let the calendar scroll horizontally from its start. */
+@media screen and (max-width: 950px) {
+    #github-wrapper {
+        display: block;
+        width: 92vw;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
     }
 }

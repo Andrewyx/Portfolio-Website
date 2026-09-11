@@ -1,10 +1,10 @@
 :root {
   font-family: 'Asap';
   line-height: 1.5;
-  font-weight: 400;
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  --background-default: #181818;
+  font-weight: 300;
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.9);
+  --background-default: #020617;
   background-color: var(--background-default);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,6 +15,30 @@
 
 html {
   width: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+/* Visible focus ring for keyboard navigation */
+:focus-visible {
+  outline: 2px solid var(--accent-secondary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
 }
 
 body {
@@ -153,11 +177,6 @@ section {
 
     h3 {
       font-size: 1.3rem;
-    }
-
-    .project {
-      height: 10rem;
-      width: 20rem;
     }
   }
 

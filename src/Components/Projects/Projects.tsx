@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import flintgif from "./../../assets/flintvid-op.mp4";
 import soccer from "./../../assets/soccer-op.jpg";
 import lift from "./../../assets/lift7-op.mp4";
@@ -5,240 +7,243 @@ import flicker from "./../../assets/flicker.png";
 import crossy from "./../../assets/crossy.png";
 import butler from "./../../assets/butlerbot-op.jpg";
 import roundtable from "./../../assets/roundtable.png";
-import slack from "./../../assets/slack.png";
 import loopy from "./../../assets/loopy.png";
 import latent from "./../../assets/latent.jpg";
-import tongue from "./../../assets/tongue.jpeg"
+import tongue from "./../../assets/tongue.jpeg";
 import octo from "./../../assets/octo.png";
-import walle from "./../../assets/WallEAssemblyIso.jpg"
-import exec from "./../../assets/exec.png"
-import pikspace from "./../../assets/pikspace.png"
+import walle from "./../../assets/WallEAssemblyIso.jpg";
+import exec from "./../../assets/exec.jpg";
+import pikspace from "./../../assets/pikspace.jpg";
+import slack from "./../../assets/slack.jpg";
 
 import "./Projects.css";
 
-function MakeSkills({ skills }: { skills: string[] }) {
-  const listItems = skills.map((txt) =>
-    <span key={txt} className='project-skills-boxes'>{txt}</span>
-  );
-  return (
-    <div id='project-skills'>{listItems}</div>
-  )
-}
+type Category = "Games" | "Robotics" | "AI" | "Web & Apps";
 
-
-function MakeProject({ title, hook, tech, overlaytitle, desc, link, img, vid, starred }: Details) {
-  let media;
-  if (vid) {
-    media = <video autoPlay loop muted src={vid}></video>
-  }
-  else {
-    media = <img src={img} alt={title}></img>
-  }
-  return (
-    <a href={link} target="_blank" rel="noopener noreferrer">
-      <div className={'project' + (starred ? ' starred' : '')}>
-        {media}
-        <div className='cardDesc'>
-          <h3>{title}</h3>
-
-          <p>{hook}</p>
-          <MakeSkills skills={tech} />
-        </div>
-        <div className='cardInfo'>
-          <h3>{overlaytitle}</h3>
-          <p>{desc}</p>
-        </div>
-      </div>
-    </a>
-  )
-}
-
-interface Details {
+interface Project {
   title: string;
-  hook: string;
+  blurb: string;
   tech: string[];
-  overlaytitle: string;
-  desc: string;
-  link: string;
+  category: Category;
+  event?: string;
+  award?: string;
+  live?: string;
+  code?: string;
   img?: string;
   vid?: string;
   starred?: boolean;
 }
 
-export function Projects() {
-  const data: Details[] = [
-    {
-      title: "Execution Order",
-      hook: "GMTK Ranked top 400 amongst 37k participants in the largest game jam in Itch.io history (2025) for theme 'Loop'",
-      tech: ["Unity", "C#"],
-      overlaytitle: "Game Maker's Toolkit 2025",
-      desc: `You are at the whims of the machine, alone, but perhaps...YOU can help YOURSELF. Fully in-house developed puzzle game (including art!) where you control multiple versions of yourself in a time loop to solve puzzles and escape an infinite cycle.`,
-      link: `https://andrewyx.itch.io/execution-order`,
-      img: exec,
-      starred: true
-    },
-    {
-      title: "Handshake",
-      hook: "Stay close with those you have fun with and keep in touch with those too far away for a simple handshake!",
-      tech: ["C++", "Firebase", "PlatformIO"],
-      overlaytitle: "Handshake",
-      desc: `Handshake is a robot + application pair that allows you and your friends to remotely control a handshake robot together. Via a web interface https://handshake-664b7.firebaseapp.com/, interact with friends beyond just a screen or video call!`,
-      link: `https://github.com/Andrewyx/Handshake`,
-      img: walle,
-      starred: true
-    },
-    {
-      title: "Pikspace",
-      hook: "A DSLR simulation in VR for the Meta Quest 3. Built with Unity game engine using HD Render Pipeline.",
-      tech: ["Unity", "C#"],
-      overlaytitle: "nwHacks 2025",
-      desc: `Pikspace aims to be a realistic camera simulator above all else. When you strap on your vr headset, you'll be transported into a photorealistic vista armed with a life-like DSLR. Physical properties of DSLRs are simulated including aperture, shutter speed, ISO, and focal length. Use this digital world to learn how cameras work!`,
-      link: `https://github.com/TightGrapes/Pikspace`,
-      img: pikspace,
-    },
-    {
-      title: "Octochat",
-      hook: "Live Retrieval-Augmented Generatation (RAG) browser extension for GitHub repositories. Hack The North 2024",
-      tech: ["Flask", "WXT React", "Voiceflow API"],
-      overlaytitle: "Octochat",
-      desc: `Extension-application pair which helps developers understand a new code file by allowing them to ask questions about how code snippets or functions work, search for where something has been implemented, how to debug an error, and help generate better documentation.`,
-      link: `https://github.com/Andrewyx/Octochat-HTN2024`,
-      img: octo
-    },
-    {
-      title: "Tongue Tied Tale",
-      hook: "GMTK Ranked top 25% amongst 32500 participants in the largest game jam in Itch.io history (2024)",
-      tech: ["Unity", "C#"],
-      overlaytitle: "Tongue Tied Tale",
-      desc: `Tongue Tied Tale is a 2D Metroidvania featuring a chameleon who loves to eat! Play as a hungry reptile that'll consume everything in its path—even its enemies... Ranked top 25% in 32500-participant Game Maker's Toolkit 2024 game development competition.`,
-      link: `https://github.com/Watercooled-Grapes/GMTK-2024`,
-      img: tongue
-    },
-    {
-      title: "Loopy",
-      hook: "Navigate the city like a local! Community-driven transit ratings and trip planning web app",
-      tech: ["React", "Firebase", "Places API"],
-      overlaytitle: "Loopy",
-      desc: `Loopy is a community-driven ratings aggregation and trip planning site that takes origin and destination inputs and displays ratings for each bus/skytrain. 
-        Users can also add ratings for each of the aformentioned criteria to transit lines they have taken to help inform the Metro Vancouver community on whether they may want to reconsider their travel routes!`,
-      link: `https://loopy-423720.web.app/`,
-      img: loopy
-    },
-    {
-      title: "LaTent",
-      hook: "A Mathematician's Guide to the Universe. LaTeX notebook and command reference app",
-      tech: ["Java", "Swing", "JUnit"],
-      overlaytitle: "LaTent",
-      desc: `LaTent is a remedy the challenges of memorizing and familiarizing the nature of LaTex commands and is not only geered towards students but all new users to LaTex.`,
-      link: `https://github.com/Andrewyx/LaTenT`,
-      img: latent
-    },
-    {
-      title: "SLack Off",
-      hook: "Education tailored to your needs powered by LLMs",
-      tech: ["React", "OpenAI", "Flask"],
-      overlaytitle: "SLack Off",
-      desc: `"SLack Off" doesn't just summarize lectures; it revolutionizes your learning journey with a personalized touch. 
-        Unlike other AI lecture notetakers, it doesn't just regurgitate information – it provides you personalized study plans, summaries of powerpoints and lecture audio, 
-        and generates relevant practice problems based on your class material 
-        -- so you don't have to zone out or be confused in class again`,
-      link: `https://www.slackoff.tech/`,
-      img: slack
-    },
+const projects: Project[] = [
+  {
+    title: "Execution Order",
+    blurb: "Puzzle game where you control multiple versions of yourself in a time loop to escape an infinite cycle. Fully in-house, art included.",
+    tech: ["Unity", "C#"],
+    category: "Games",
+    event: "GMTK 2025",
+    award: "Top 400 / 37k",
+    live: "https://andrewyx.itch.io/execution-order",
+    img: exec,
+    starred: true,
+  },
+  {
+    title: "Handshake",
+    blurb: "A robot + app pair that lets you and friends remotely control a handshake robot together — connection beyond a video call.",
+    tech: ["C++", "Firebase", "PlatformIO"],
+    category: "Robotics",
+    live: "https://handshake-664b7.firebaseapp.com/",
+    code: "https://github.com/Andrewyx/Handshake",
+    img: walle,
+    starred: true,
+  },
+  {
+    title: "Pikspace",
+    blurb: "A photorealistic DSLR camera simulator in VR for the Meta Quest 3 — aperture, shutter speed, ISO and focal length all simulated.",
+    tech: ["Unity", "C#"],
+    category: "Games",
+    event: "nwHacks 2025",
+    code: "https://github.com/TightGrapes/Pikspace",
+    img: pikspace,
+  },
+  {
+    title: "Octochat",
+    blurb: "Live RAG browser extension that answers questions about any GitHub repo — understand code, find implementations, debug faster.",
+    tech: ["Flask", "WXT React", "Voiceflow"],
+    category: "AI",
+    event: "Hack the North 2024",
+    code: "https://github.com/Andrewyx/Octochat-HTN2024",
+    img: octo,
+  },
+  {
+    title: "Tongue Tied Tale",
+    blurb: "A 2D metroidvania starring a hungry chameleon that devours everything in its path — even its enemies.",
+    tech: ["Unity", "C#"],
+    category: "Games",
+    event: "GMTK 2024",
+    award: "Top 25% / 32.5k",
+    code: "https://github.com/Watercooled-Grapes/GMTK-2024",
+    img: tongue,
+  },
+  {
+    title: "Loopy",
+    blurb: "Community-driven transit ratings and trip planner for Metro Vancouver — rate bus/skytrain lines and plan routes like a local.",
+    tech: ["React", "Firebase", "Places API"],
+    category: "Web & Apps",
+    live: "https://loopy-423720.web.app/",
+    img: loopy,
+  },
+  {
+    title: "LaTent",
+    blurb: "A LaTeX notebook and command reference that helps new users learn and remember LaTeX commands.",
+    tech: ["Java", "Swing", "JUnit"],
+    category: "Web & Apps",
+    code: "https://github.com/Andrewyx/LaTenT",
+    img: latent,
+  },
+  {
+    title: "SLack Off",
+    blurb: "LLM-powered study companion that turns lectures and slides into personalized study plans, summaries and practice problems.",
+    tech: ["React", "OpenAI", "Flask"],
+    category: "AI",
+    live: "https://www.slackoff.tech/",
+    img: slack,
+  },
+  {
+    title: "Flint",
+    blurb: "Unofficial Obsidian plugin that syncs your vault across devices through your own Firebase storage bucket.",
+    tech: ["TypeScript", "Firebase"],
+    category: "Web & Apps",
+    code: "https://github.com/Andrewyx/Flint",
+    vid: flintgif,
+  },
+  {
+    title: "Soccer Bots",
+    blurb: "WiFi-controlled soccer/jousting robots — ESP32 + custom PCBs with a low-latency WebSocket joystick UI.",
+    tech: ["JavaScript", "WebSockets", "C++"],
+    category: "Robotics",
+    code: "https://github.com/Andrewyx/Soccer-Bots",
+    img: soccer,
+  },
+  {
+    title: "Sirius B - Lift 7",
+    blurb: "Defend your elevator against hordes of intergalactic creatures with a laser blaster and grappling hook. Inspired by Deep Rock Galactic.",
+    tech: ["Unity", "C#"],
+    category: "Games",
+    event: "ZenoJam 2022",
+    live: "https://zenbubbleyt.itch.io/sirius-b-lift-7",
+    code: "https://github.com/Andrewyx/Lift-7---Sirius-B",
+    vid: lift,
+  },
+  {
+    title: "Flicker",
+    blurb: "Horror puzzle & exploration game about the precious, fragile nature of life. Custom pixel art throughout.",
+    tech: ["Unity", "C#"],
+    category: "Games",
+    event: "Dungeon Crawler Jam 2023",
+    award: "Top 40 / 200",
+    live: "https://andrewyx.itch.io/flicker",
+    code: "https://github.com/Andrewyx/Flicker",
+    img: flicker,
+  },
+  {
+    title: "Collidy Road",
+    blurb: "Roles reversed on Crossy Road — play as the CARS trying to stop the chicken.",
+    tech: ["Unity", "C#"],
+    category: "Games",
+    event: "GMTK 2023",
+    award: "Top 30% / 23k",
+    live: "https://andrewyx.itch.io/collidyroad",
+    code: "https://github.com/Andrewyx/CollidyRoad-GMTK23",
+    img: crossy,
+  },
+  {
+    title: "Butler Bot",
+    blurb: "Autonomous package-delivery robot using OpenCV on a Raspberry Pi + ESP32 for fiducial tracking and navigation.",
+    tech: ["Linux", "Python", "OpenCV"],
+    category: "Robotics",
+    code: "https://github.com/Andrewyx/ButlerBot",
+    img: butler,
+  },
+  {
+    title: "Roundtable",
+    blurb: "Webscraper + messenger that finds and sends the daily UBC Vanier dining hall menu — for the hungry first-year.",
+    tech: ["Python", "Selenium"],
+    category: "Web & Apps",
+    code: "https://github.com/Andrewyx/Roundtable",
+    img: roundtable,
+  },
+];
 
-    {
-      title: "Flint",
-      hook: "Obsidian Extension for cross-device file syncing powered by Firebase",
-      tech: ["TypeScript", "Firebase"],
-      overlaytitle: "Flint",
-      desc: `Unofficial Obsidian -
-        Firebase vault sync plugin. Store your obsidian files on your own custom Firebase storage bucket for complete control over your cloud files! This plugin was made for those who want to solely manage their own data across their obsidian devices.
-        Upload/Download data to your Firebase storage bucket with the upload icon & download.
-        Support for access to multiple remote vaults on one device.
-        Android/Mobile compatibility.`,
-      link: `https://github.com/Andrewyx/Flint`,
-      vid: flintgif
-    },
-    {
-      title: "Soccer Bots",
-      hook: `Remote controlled WIFI robots made to play soccer or joust!`,
-      tech: ["JavaScript", "WebSockets", "C++"],
-      overlaytitle: "Soccer Bots",
-      desc: `A web app and C++ server for personally designed WIFI soccer bots with an ESP32 microcontroller,
-        L298N motor driver and custom PCBs for remote control. Constructed frontend mobile UI for joystick robot control and optimized latency with Web Socket API to link
-        frontend to ESP32 access point server`,
-      link: `https://github.com/Andrewyx/Soccer-Bots`,
-      img: soccer
-    },
-    {
-      title: "Sirius B - Lift 7",
-      hook: `ZenoJam 7 Day Game Jam Submission`,
-      tech: ["Unity", "C#"],
-      overlaytitle: "Protect your lift!",
-      desc: `Defend your elevator against hordes of intergalactic creatures armed with only your trust laser blaster and grappling hook! 
-        Team Grape Crush ZenoJam 2022 Submission "Uva comminuet deum" Andrew Mao, Alex Mei, Dorson Tang 2022 ZenoJam Submission inspired by Deep Rock Galactic. :) 
-        play at https://zenbubbleyt.itch.io/sirius-b-lift-7`,
-      link: `https://github.com/Andrewyx/Lift-7---Sirius-B`,
-      vid: lift
-    },
+const filters: (Category | "All")[] = ["All", "Games", "Robotics", "AI", "Web & Apps"];
 
-    {
-      title: "Flicker",
-      hook: `Top 40 for Dungeon Crawler Jam 2023 - Team Grapes with theme "Duality"`,
-      tech: ["Unity", "C#"],
-      overlaytitle: "The Flame Falters...",
-      desc: `Ranked Top 40 out of 200 in the 2023 Dungeon Crawler Jam Game Jam. Horror themed puzzle & exploration game inspired by the precious nature of life. 
-        Built using Unity Game Engine, C#, and custom pixel art with LibreSprite
-        play at https://andrewyx.itch.io/flicker`,
-      link: `https://github.com/Andrewyx/Flicker`,
-      img: flicker
-    },
-    {
-      title: "Collidy Road",
-      hook: `GMTK Ranked top 30% amongst 23000 participants in the largest game jam in Itch.io history (2023)`,
-      tech: ["Unity", "C#"],
-      overlaytitle: "ROLES REVERSED",
-      desc: `Become the ultimate antagonist against the Crossy Road inspired chicken and play as the CARS! 
-        Designed during the two-day Game Maker’s Toolkit (GMTK) Game Jam with the theme of ROLES REVERSED.
-        play at https://andrewyx.itch.io/collidyroad`,
-      link: `https://github.com/Andrewyx/CollidyRoad-GMTK23`,
-      img: crossy
-    },
-    {
-      title: "Butler Bot",
-      hook: `Robotics 12 Autonomous package delivery project`,
-      tech: ["Linux", "Python", "OpenCV"],
-      overlaytitle: "Butler bot",
-      desc: `Uses OpenCV on a Raspberry Pi 3B+ and a WROOM ESP32 for autonomous tracking and navigation with fiducials. 
-        Also contains additional wifi driving option with joystick controls on any device`,
-      link: `https://github.com/Andrewyx/ButlerBot`,
-      img: butler
-    },
-    {
-      title: "Roundtable",
-      hook: `Simple webscraper and messenger that finds and sends daily UBC dining hall menu`,
-      tech: ["Python", "Selenium"],
-      overlaytitle: "Roundtable",
-      desc: `UBC Vanier Food Web Scraper For when you are a hungry first-year and a lover of the Vanier Experience.
-        Uses selenium to scrape the UBC Gather kitchen lunch/dinner menu for the current date.
-        Stores pulled menu locally in cached txt file and can be configured with Windows Task Scheduler for daily updates`,
-      link: `https://github.com/Andrewyx/Roundtable`,
-      img: roundtable
-    },
-  ];
-
-  const listofDetails = data.map((d) => <div key={d.title}>
-    <MakeProject
-      title={d.title}
-      hook={d.hook}
-      tech={d.tech}
-      overlaytitle={d.overlaytitle}
-      desc={d.desc} link={d.link}
-      img={d.img}
-      vid={d.vid}
-      starred={d.starred} />
-  </div>);
+function ProjectCard({ p }: { p: Project }) {
+  const primary = p.live ?? p.code;
+  const media = p.vid ? (
+    <video autoPlay loop muted playsInline src={p.vid} />
+  ) : (
+    <img src={p.img} alt={p.title} loading="lazy" decoding="async" />
+  );
   return (
-    <>{listofDetails}</>
-  )
+    <article className={"project" + (p.starred ? " starred" : "")}>
+      <a
+        className="project-media"
+        href={primary}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`${p.title} — open ${p.live ? "live demo" : "source"}`}
+      >
+        {media}
+        {p.award && <span className="project-award">🏆 {p.award}</span>}
+      </a>
+      <div className="project-body">
+        <span className="project-eyebrow">{p.event ?? p.category}</span>
+        <h3>{p.title}</h3>
+        <p className="project-blurb">{p.blurb}</p>
+        <div className="project-tags">
+          {p.tech.map((t) => (
+            <span key={t} className="project-tag">{t}</span>
+          ))}
+        </div>
+        <div className="project-actions">
+          {p.live && (
+            <a className="project-btn primary" href={p.live} target="_blank" rel="noopener noreferrer">
+              Live <span aria-hidden="true">↗</span>
+            </a>
+          )}
+          {p.code && (
+            <a className="project-btn" href={p.code} target="_blank" rel="noopener noreferrer">
+              Code <span aria-hidden="true">↗</span>
+            </a>
+          )}
+        </div>
+      </div>
+    </article>
+  );
+}
+
+export function Projects() {
+  const [active, setActive] = useState<Category | "All">("All");
+  const shown = active === "All" ? projects : projects.filter((p) => p.category === active);
+
+  return (
+    <>
+      <div className="project-filters" role="group" aria-label="Filter projects by category">
+        {filters.map((f) => (
+          <button
+            key={f}
+            className={"filter-pill" + (active === f ? " active" : "")}
+            aria-pressed={active === f}
+            onClick={() => setActive(f)}
+          >
+            {f}
+          </button>
+        ))}
+      </div>
+      <div className="project-grid">
+        {shown.map((p) => (
+          <ProjectCard key={p.title} p={p} />
+        ))}
+      </div>
+    </>
+  );
 }

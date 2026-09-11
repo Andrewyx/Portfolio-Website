@@ -11,7 +11,7 @@ function SkillList({ skills }: { skills: string[] }) {
     <MakeSkill name={txt.toString()} key={txt.toString()} />
   );
   return (
-    <div id='skill'>{listItems}</div>
+    <div className='skill'>{listItems}</div>
   )
 }
 

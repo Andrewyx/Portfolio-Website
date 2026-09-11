@@ -1,15 +1,15 @@
 #root {
   text-align: center;
-  --purple: rgb(123, 31, 162);
-  --violet: rgb(103, 58, 183);
-  --pink: rgb(244, 143, 177);
-  --offwhite: #FFF7D4;
-  --yellow: #FFD95A;
-  --orchid: #C07F00;
-  --brown: #4C3D3D;
-  --darkgrey: rgba(255, 255, 255, 0.048);
-  --lightgrey: rgba(88, 88, 88, 0.671);
-  --lightgreytext: rgb(156, 156, 156);
+  --dark-base: #020617;
+  --dark-surface: #0f172a;
+  --accent-primary: #6366f1;
+  --accent-secondary: #06b6d4;
+  --accent-tertiary: #8b5cf6;
+  --accent-light: #e0e7ff;
+  
+  --darkgrey: rgba(30, 41, 59, 0.7);
+  --lightgrey: rgba(51, 65, 85, 0.7);
+  --lightgreytext: #94a3b8;
 }
 
 #title {
@@ -18,14 +18,19 @@
   align-items: center;
   justify-content: center;
 
-  div {
+  .inline-title-wrapper {
+    display: inline;
     margin-bottom: 1rem;
+  }
+  
+  .inline-title {
+    display: inline;
   }
 }
 
 #landing {
   height: fit-content;
-  padding-top: 4vh;
+  padding-top: calc(4vh + 4rem);
   padding-bottom: 4vh;
   padding-left: 5vw;
   padding-right: 5vw;
@@ -42,10 +47,10 @@
   #name {
     margin-left: 1rem;
     background-image: linear-gradient(to right,
-        var(--orchid),
-        var(--yellow),
-        var(--orchid),
-        var(--orchid));
+        var(--accent-secondary),
+        var(--accent-primary),
+        var(--accent-tertiary),
+        var(--accent-secondary));
     animation: background-pan 3s linear infinite;
     background-size: 200%;
     -webkit-background-clip: text;
@@ -72,31 +77,35 @@
     }
   }
 
-  #contact {
-    border-radius: 2rem;
-    border: 0px solid transparent;
-    padding: 0.7em 2.2em;
-    font-size: 1.5em;
-    font-weight: 550;
-    font-family: inherit;
-    display: inline-block;
-    position: relative;
-    border: 0.1rem solid rgba(255, 255, 255, 0.582);
+  .contact-btn {
+    margin-top: 0.5rem;
   }
 }
 
-#contact:hover {
-
-  background-image: linear-gradient(to right,
-      var(--orchid),
-      var(--yellow),
-      var(--orchid),
-      var(--orchid));
-  animation: background-pan 2s infinite;
-  background-size: 200%;
-  transform: scale(0.95);
-  box-shadow: 0 1rem 3rem var(--yellow);
+.contact-btn {
+  border-radius: 2rem;
+  padding: 0.7em 2.2em;
+  font-size: 1.5em;
+  font-weight: 550;
+  font-family: inherit;
+  display: inline-block;
+  position: relative;
+  background-color: transparent;
+  border: 0.1rem solid rgba(255, 255, 255, 0.582);
   transition: all 0.2s ease-in-out;
+}
+
+.contact-btn:hover,
+.contact-btn:focus-visible {
+  background-image: linear-gradient(to right,
+      var(--accent-secondary),
+      var(--accent-primary),
+      var(--accent-tertiary),
+      var(--accent-secondary));
+  animation: background-pan 3s infinite;
+  background-size: 200%;
+  transform: scale(0.97);
+  box-shadow: 0 0.5rem 2rem rgba(99, 102, 241, 0.4);
 }
 
 .titlespan {
@@ -186,11 +195,11 @@
 #footer {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-  border: 0.1rem solid rgba(255, 255, 255, 0.233);
+  border: 0.1rem solid rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #181818;
+  background-color: var(--dark-base);
   padding: 1rem;
   padding-top: 0rem;
 
@@ -203,11 +212,16 @@
     width: fit-content;
     border-radius: 5rem;
 
-    #contact {
-      background-color: #c0800000;
+    .contact-btn {
+      background-color: transparent;
       border: 1px solid rgba(255, 255, 255, 0.87);
       transform: scale(1.2);
       border-radius: 5rem;
+    }
+
+    .contact-btn:hover,
+    .contact-btn:focus-visible {
+      transform: scale(1.14);
     }
 
   }
@@ -219,12 +233,12 @@
 
 .footer-wrapper {
   background-image: linear-gradient(to right,
-      var(--orchid),
-      var(--offwhite),
-      var(--yellow),
-      var(--orchid),
-      var(--brown),
-      var(--orchid));
+      var(--accent-secondary),
+      var(--dark-surface),
+      var(--accent-primary),
+      var(--accent-tertiary),
+      var(--dark-base),
+      var(--accent-secondary));
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   animation: background-pan 4s infinite;

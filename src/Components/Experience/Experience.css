@@ -1,127 +1,175 @@
-#experience {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: flex-start;
-    padding: 1.5rem;
-}
-
-#experience .experienceImage {
-    margin-top: 0rem;
-    padding: 0rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#experience .contactbutton {
-    display: flex;
-    margin: 1rem 0rem;
-}
-
-#experience button {
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    background-color: rgba(20, 20, 20, 0.623);
-    border-radius: 1rem;
-}
-
-#experience p {
-    text-align: left;
-    margin-top: 1rem;
-}
-
-#experience .title {
-    margin: 0;
-}
-
-#experience .subtitle {
-    margin: 0;
-}
-
-#experience button:hover {
-    background-image: linear-gradient(to right,
-            var(--orchid),
-            var(--yellow),
-            var(--orchid),
-            var(--orchid));
-    animation: background-pan 2s infinite;
-    background-size: 200%;
-    box-shadow: 0 0rem 1rem 0.1rem var(--yellow);
-    transition: all 0.2s ease-in-out;
-}
-
-#experience:hover {
-    background-color: var(--darkgrey);
-    border-radius: 1rem;
-    .experienceImage {
-        margin-top: 0.5rem;
-        visibility: visible;
-        opacity: 1;
-        max-height: 200rem;
-    }
-}
-
+/* The timeline content div becomes our card */
 .vertical-timeline-element .text-class {
-    background-color: var(--darkgrey);
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 1rem;
-        border: 1px solid var(--lightgrey);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
 
+.vertical-timeline-element .text-class:hover {
+    transform: translateY(-0.4rem);
+    border-color: rgba(255, 255, 255, 0.16);
+    box-shadow: 0 1rem 3rem rgba(99, 102, 241, 0.28);
 }
 
 .text-class.vertical-timeline-element-content.bounce-in {
-    padding: 0%;
+    padding: 0;
 }
-
-
 
 .vertical-timeline-element-icon {
-    background-color: var(--background-default);
-}
-
-.experienceImage {
-    transition: all 0.3s ease-in-out;
-    visibility: hidden;
-    opacity: 0;
-    max-height: 0rem;
-}
-
-.experienceImage img {
-    object-fit: contain;
-    max-width: 100%;
-    max-height: 15rem;
-    overflow: hidden;
-    border-radius: 0.2rem;
-    box-shadow: 0 0.5rem 1rem  rgba(0, 0, 0, 0.8);
-}
-
-.experienceImage video {
-    object-fit: contain;
-    max-width: 100%;
-    max-height: 100%;
-    overflow: hidden;
-    border-radius: 0.2rem;
-    box-shadow: 0 0.5rem 1rem  rgba(0, 0, 0, 0.8);
-}
-
-.experience-skills-boxes {
-    font-size: 1rem;
-    border-radius: 2rem;
-    background-color: var(--lightgrey);
-    padding: 0.5rem;
-    margin: 0;
-    margin-top: 0.7rem;
-    margin-right: 0.4rem;
-    white-space: nowrap
-}
-
-#experience-skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    background-color: var(--dark-surface);
 }
 
 .vertical-timeline-element-date {
     text-align: left;
     margin-left: 1rem;
+    color: var(--lightgreytext);
+    opacity: 1;
+    font-weight: 500;
+}
+
+/* ---- Card contents ---- */
+.experience {
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-media {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background-color: var(--dark-surface);
+}
+
+.experience-media img,
+.experience-media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.vertical-timeline-element .text-class:hover .experience-media img,
+.vertical-timeline-element .text-class:hover .experience-media video {
+    transform: scale(1.05);
+}
+
+.experience-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.1rem 1.3rem 1.3rem;
+    text-align: left;
+}
+
+.experience-eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--accent-secondary);
+}
+
+.experience-title {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.experience-desc {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--lightgreytext);
+}
+
+.experience-highlights {
+    list-style: none;
+    margin: 0.2rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+}
+
+.experience-highlights li {
+    position: relative;
+    padding-left: 1rem;
+    font-size: 0.88rem;
+    line-height: 1.45;
+    color: var(--lightgreytext);
+}
+
+.experience-highlights li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5em;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    background-color: var(--accent-secondary);
+}
+
+.experience-highlight-label {
+    color: #fff;
+    font-weight: 600;
+}
+
+.experience-highlight-label::after {
+    content: " — ";
+    color: var(--lightgreytext);
+    font-weight: 400;
+}
+
+.experience-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.1rem;
+}
+
+.experience-tag {
+    font-size: 0.76rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 0.9rem;
+    color: var(--accent-light);
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    white-space: nowrap;
+}
+
+.experience-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+}
+
+.experience-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.42rem 0.95rem;
+    border-radius: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.experience-btn:hover {
+    color: #fff;
+    border-color: transparent;
+    background-image: linear-gradient(to right,
+            var(--accent-secondary),
+            var(--accent-primary),
+            var(--accent-tertiary),
+            var(--accent-secondary));
+    background-size: 200%;
+    animation: background-pan 3s infinite;
+    box-shadow: 0 0.3rem 1rem rgba(99, 102, 241, 0.3);
 }

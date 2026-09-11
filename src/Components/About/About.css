@@ -13,7 +13,8 @@
 
         p {
             margin-bottom: 2rem;
-            width: 60%;
+            max-width: 800px;
+            width: 90%;
         }
 
         img {
@@ -50,7 +51,7 @@
     }
 }
 
-#about #skill-container #skill {
+#about #skill-container .skill {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -79,12 +80,12 @@
 
 #skill-container .skill-list {
     background-image: linear-gradient(to right,
-            var(--orchid),
-            var(--offwhite),
-            var(--yellow),
-            var(--orchid),
-            var(--brown),
-            var(--orchid));
+            var(--accent-secondary),
+            var(--dark-surface),
+            var(--accent-primary),
+            var(--accent-tertiary),
+            var(--dark-base),
+            var(--accent-secondary));
     border-radius: 2rem;
     animation: background-pan 4s infinite;
     background-size: 200%;
